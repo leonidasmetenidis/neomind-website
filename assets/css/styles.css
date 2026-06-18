@@ -120,14 +120,18 @@ body {
   color: #FFFFFF;
 }
 
-.hero__headline {
+.headline {
   margin: 0;
   font-family: 'Switzer', sans-serif;
   font-weight: 400;
+  font-size: clamp(28px, 3.5vw, 48px);
+  line-height: 1.1;
+  color: #FFFFFF;
+}
+
+.hero__headline {
   font-size: 56px;
   line-height: 1.05;
-  color: #FFFFFF;
-  opacity: 1;
 }
 
 .hero__subheadline {
@@ -236,15 +240,6 @@ body {
   padding: clamp(32px, 5%, 72px);
 }
 
-.problem__headline {
-  margin: 0;
-  font-family: 'Switzer', sans-serif;
-  font-weight: 400;
-  font-size: clamp(28px, 3.5vw, 48px);
-  line-height: 1.1;
-  color: #FFFFFF;
-}
-
 .problem__text {
   margin: 24px 0 0;
   font-family: 'Inter', sans-serif;
@@ -254,3 +249,13 @@ body {
   color: #FFFFFF;
   opacity: 0.8;
 }
+
+.features {
+  position: relative;
+  z-index: 1;
+  width: 50%;
+  margin: 0 auto;
+  padding: 40px 0 80px;
+  text-align: center;
+}
+
