@@ -17,15 +17,19 @@
 }
 
 body {
+  position: relative;
   margin: 0;
   background-color: #0C0C0C;
   font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
 }
 
 /* ==========================================================================
    Header
    ========================================================================== */
 .header {
+  position: relative;
+  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -84,6 +88,8 @@ body {
    Hero
    ========================================================================== */
 .hero {
+  position: relative;
+  z-index: 1;
   max-width: 1280px;
   margin: 0 auto;
   padding: 80px 48px;
@@ -123,6 +129,41 @@ body {
   height: 52px;
   width: auto;
   display: block;
+}
+
+.bg-glows {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero__glow {
+  position: absolute;
+  top: calc(50% + 200px);
+  left: 50%;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  filter: blur(250px);
+}
+
+.hero__glow--1 {
+  background-color: #7207EA;
+  transform: translate(-180%, -50%);
+}
+
+.hero__glow--2 {
+  background-color: #8D02F1;
+  transform: translate(-50%, -50%);
+}
+
+.hero__glow--3 {
+  background-color: #C301EE;
+  transform: translate(80%, -50%);
 }
 
 .hero__image {
