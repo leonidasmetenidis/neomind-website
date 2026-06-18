@@ -82,7 +82,7 @@ function applyLanguage(lang) {
     toggle.setAttribute('aria-expanded', 'false');
   }
 
-  function selectLang(lang) {
+  function selectLang(lang, updateUrl) {
     items.forEach(function (i) {
       const active = i.dataset.lang === lang;
       i.classList.toggle('is-active', active);
@@ -93,6 +93,13 @@ function applyLanguage(lang) {
     });
     applyLanguage(lang);
     try { localStorage.setItem('lang', lang); } catch (e) {}
+
+    if (updateUrl) {
+      const url = new URL(window.location.href);
+      url.searchParams.set('lang', lang);
+      // Browsers block URL rewriting on file:// pages, so guard against it.
+      try { history.replaceState(null, '', url); } catch (e) {}
+    }
   }
 
   toggle.addEventListener('click', function (e) {
@@ -102,7 +109,7 @@ function applyLanguage(lang) {
 
   items.forEach(function (item) {
     item.addEventListener('click', function () {
-      selectLang(item.dataset.lang);
+      selectLang(item.dataset.lang, true);
       close();
     });
   });
@@ -117,8 +124,15 @@ function applyLanguage(lang) {
     if (e.key === 'Escape') close();
   });
 
-  // Restore previously selected language.
+  // Pick the initial language: ?lang= in the URL wins, then the saved choice.
+  const supported = Array.from(items).map(function (i) { return i.dataset.lang; });
+  const urlLang = new URL(window.location.href).searchParams.get('lang');
   let saved;
   try { saved = localStorage.getItem('lang'); } catch (e) {}
-  if (saved && saved !== 'en') selectLang(saved);
+
+  const initial = supported.indexOf(urlLang) !== -1 ? urlLang
+    : supported.indexOf(saved) !== -1 ? saved
+    : 'en';
+  // Sync the URL on load so it always reflects the active language.
+  selectLang(initial, true);
 })();
