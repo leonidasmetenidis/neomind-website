@@ -79,7 +79,7 @@ html {
 body {
   position: relative;
   margin: 0;
-  background-color: #0C0C0C;
+  background-color: #000000;
   font-family: 'Inter', sans-serif;
   overflow-x: hidden;
 }
@@ -630,7 +630,7 @@ body {
     max-width: 100%;
     justify-content: flex-start;
     padding: 48px 24px;
-    text-align: center;
+    text-align: left;
   }
 
   /* Features */
