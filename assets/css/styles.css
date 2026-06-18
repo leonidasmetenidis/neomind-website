@@ -1,0 +1,134 @@
+/* ==========================================================================
+   Fonts
+   ========================================================================== */
+@font-face {
+  font-family: 'Switzer';
+  src: url('../fonts/Switzer (OTF)/Switzer-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #0C0C0C;
+  font-family: 'Inter', sans-serif;
+}
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 36px 48px 24px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.header__logo img {
+  height: 28px;
+  width: auto;
+  display: block;
+}
+
+.header__actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Language switch */
+.lang-switch {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 999px;
+  background-color: #1A1A1A;
+  color: #FFFFFF;
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.lang-switch__flag {
+  font-size: 20px;
+  line-height: 1;
+}
+
+/* Try for free button */
+.btn-try {
+  padding: 10px 26px;
+  border: none;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #8A2BE2 0%, #C724B1 100%);
+  color: #FFFFFF;
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+/* ==========================================================================
+   Hero
+   ========================================================================== */
+.hero {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 80px 48px;
+  text-align: center;
+}
+
+.hero__headline {
+  margin: 0;
+  font-family: 'Switzer', sans-serif;
+  font-weight: 400;
+  font-size: 56px;
+  line-height: 1.05;
+  color: #FFFFFF;
+  opacity: 1;
+}
+
+.hero__subheadline {
+  margin: 24px auto 0;
+  max-width: 720px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #FFFFFF;
+  opacity: 0.8;
+}
+
+.hero__badges {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 36px;
+}
+
+.hero__badge img {
+  height: 52px;
+  width: auto;
+  display: block;
+}
+
+.hero__image {
+  width: 552px;
+  max-width: 50%;
+  height: auto;
+  display: block;
+  margin: 64px auto 0;
+}
