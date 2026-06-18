@@ -3,8 +3,64 @@
    ========================================================================== */
 @font-face {
   font-family: 'Switzer';
+  src: url('../fonts/Switzer (OTF)/Switzer-Thin.otf') format('opentype');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Switzer';
+  src: url('../fonts/Switzer (OTF)/Switzer-Extralight.otf') format('opentype');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Switzer';
+  src: url('../fonts/Switzer (OTF)/Switzer-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Switzer';
+  src: url('../fonts/Switzer (OTF)/Switzer-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Switzer';
   src: url('../fonts/Switzer (OTF)/Switzer-Medium.otf') format('opentype');
   font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Switzer';
+  src: url('../fonts/Switzer (OTF)/Switzer-Semibold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Switzer';
+  src: url('../fonts/Switzer (OTF)/Switzer-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Switzer';
+  src: url('../fonts/Switzer (OTF)/Switzer-Extrabold.otf') format('opentype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Switzer';
+  src: url('../fonts/Switzer (OTF)/Switzer-Black.otf') format('opentype');
+  font-weight: 900;
   font-style: normal;
   font-display: swap;
 }
@@ -123,7 +179,7 @@ body {
 .headline {
   margin: 0;
   font-family: 'Switzer', sans-serif;
-  font-weight: 400;
+  font-weight: 500;
   font-size: clamp(28px, 3.5vw, 48px);
   line-height: 1.1;
   color: #FFFFFF;
@@ -142,7 +198,7 @@ body {
   font-size: 16px;
   line-height: 1.5;
   color: #FFFFFF;
-  opacity: 0.8;
+  opacity: 0.7;
 }
 
 .hero__badges {
@@ -247,15 +303,48 @@ body {
   font-size: clamp(13px, 1.1vw, 16px);
   line-height: 1.5;
   color: #FFFFFF;
-  opacity: 0.8;
+  opacity: 0.7;
 }
 
 .features {
   position: relative;
   z-index: 1;
-  width: 50%;
+  max-width: 1280px;
   margin: 0 auto;
-  padding: 40px 0 80px;
+  padding: 40px 48px 80px;
   text-align: center;
+}
+
+.features__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-top: 48px;
+  text-align: left;
+}
+
+.feature-card {
+  padding: clamp(20px, 2vw, 32px);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.feature-card__title {
+  margin: 0;
+  font-family: 'Switzer', sans-serif;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 1.15;
+  color: #FFFFFF;
+}
+
+.feature-card__text {
+  margin: 16px 0 0;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #FFFFFF;
+  opacity: 0.7;
 }
 
