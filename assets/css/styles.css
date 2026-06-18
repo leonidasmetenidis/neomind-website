@@ -28,14 +28,16 @@ body {
    Header
    ========================================================================== */
 .header {
-  position: relative;
-  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 36px 48px 24px;
-  max-width: 1280px;
-  margin: 0 auto;
+  padding: 36px max(48px, calc((100% - 1280px) / 2)) 24px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
 }
 
 .header__logo img {
@@ -92,7 +94,7 @@ body {
   z-index: 1;
   max-width: 1280px;
   margin: 0 auto;
-  padding: 80px 48px;
+  padding: 160px 48px 80px;
   text-align: center;
 }
 
