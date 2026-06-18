@@ -72,6 +72,10 @@
   box-sizing: border-box;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   position: relative;
   margin: 0;
@@ -502,5 +506,215 @@ body {
   color: #FFFFFF;
   opacity: 0.7;
   text-align: center;
+}
+
+/* ==========================================================================
+   Responsive
+   ========================================================================== */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .hero__headline,
+  .cta__headline {
+    font-size: clamp(36px, 6vw, 56px);
+  }
+
+  .hero__image {
+    max-width: 70%;
+  }
+
+  .features__headline {
+    width: 70%;
+  }
+
+  .feature-card {
+    height: auto;
+    min-height: 420px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  /* Ignore hard line breaks in headlines so copy wraps naturally,
+     replacing each <br> with a space so words stay separated. */
+  .headline br,
+  .feature-card__title br {
+    content: " ";
+  }
+
+  /* Header — keep the logo and language switch on one row. The "Try for
+     free" CTA is hidden on mobile to save horizontal space. */
+  .header {
+    padding: 20px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
+  }
+
+  .header__actions {
+    gap: 8px;
+  }
+
+  .header__logo img {
+    height: 24px;
+  }
+
+  .btn-try {
+    display: none;
+  }
+
+  .lang-switch {
+    padding: 8px 14px;
+    font-size: 14px;
+  }
+
+  .lang-switch__flag {
+    font-size: 16px;
+  }
+
+  /* Hero */
+  .hero {
+    padding: 120px 20px 60px;
+  }
+
+  .hero__headline {
+    font-size: clamp(38px, 10vw, 52px);
+    line-height: 1.15;
+    overflow-wrap: break-word;
+  }
+
+  .problem .headline,
+  .features__headline {
+    font-size: clamp(34px, 9vw, 46px);
+    line-height: 1.25;
+  }
+
+  .hero__subheadline {
+    font-size: 15px;
+  }
+
+  .hero__badges {
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 28px;
+  }
+
+  .hero__badge img {
+    height: 56px;
+  }
+
+  /* Full-bleed hero image — break out of the hero's 20px side padding to span
+     the full viewport width. */
+  .hero__image {
+    width: 100vw;
+    max-width: none;
+    margin: 48px calc(-50vw + 50%) 0;
+  }
+
+  /* Problem — full-bleed, zoomed image shifted right (as on desktop), with the
+     copy overlaid on the dark left side. */
+  .problem {
+    padding: 48px 0;
+  }
+
+  .problem__card {
+    border-radius: 0;
+  }
+
+  .problem__image {
+    height: 480px;
+    object-fit: cover;
+    transform: none;
+  }
+
+  .problem__content {
+    inset: 0;
+    max-width: 100%;
+    justify-content: flex-start;
+    padding: 48px 24px;
+    text-align: center;
+  }
+
+  /* Features */
+  .features {
+    padding: 24px 20px 60px;
+  }
+
+  .features__headline {
+    width: 100%;
+  }
+
+  .features__grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-top: 36px;
+  }
+
+  .feature-card {
+    min-height: 0;
+  }
+
+  .feature-card__title {
+    font-size: 26px;
+  }
+
+  /* CTA */
+  .cta {
+    margin-top: 60px;
+  }
+
+  .cta__image {
+    height: 560px;
+  }
+
+  .cta__content {
+    width: 100%;
+    padding: 0 24px;
+  }
+
+  .cta__headline {
+    font-size: clamp(38px, 10vw, 52px);
+    line-height: 1.15;
+  }
+
+  /* Footer */
+  .footer {
+    padding: 80px 20px 40px;
+  }
+
+  .footer__inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .footer__brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer__col {
+    align-items: center;
+  }
+
+  .footer__badges {
+    align-items: center;
+  }
+
+  .footer__copyright {
+    margin: 56px 0 0;
+    text-align: center;
+  }
+
+  .footer__badge img {
+    height: 64px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 400px) {
+  .footer__inner {
+    grid-template-columns: 1fr;
+  }
 }
 
