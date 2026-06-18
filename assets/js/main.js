@@ -21,7 +21,7 @@ const translations = {
     feature_5_text: 'Mach dein Handy zu einem Werkzeug für Wachstum, nicht nur zur Ablenkung.',
     feature_6_title: 'Nimm Affirmationen<br>mit deiner eigenen Stimme auf.',
     feature_6_text: 'Deine eigene Stimme trägt eine Überzeugung, die niemand sonst nachahmen kann.',
-    cta_headline: 'Nur ein Gedanke trennt dich<br>von einem neuen Leben.',
+    cta_headline: 'Nur ein Gedanke trennt dich von einem neuen Leben.',
     cta_subheadline: 'Starte noch heute deine kostenlose Testphase und entdecke die Version von dir, die auf dich gewartet hat.',
     btn_try: 'Kostenlos testen',
     footer_pages: 'Seiten',
