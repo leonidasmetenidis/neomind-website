@@ -136,3 +136,24 @@ function applyLanguage(lang) {
   // Sync the URL on load so it always reflects the active language.
   selectLang(initial, true);
 })();
+
+// FAQ accordion — clicking a question opens it and closes the others.
+(function () {
+  const items = document.querySelectorAll('.faq__item');
+  if (!items.length) return;
+
+  items.forEach(function (item) {
+    const question = item.querySelector('.faq__question');
+    question.addEventListener('click', function () {
+      const willOpen = !item.classList.contains('is-open');
+      items.forEach(function (other) {
+        other.classList.remove('is-open');
+        other.querySelector('.faq__question').setAttribute('aria-expanded', 'false');
+      });
+      if (willOpen) {
+        item.classList.add('is-open');
+        question.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+})();
