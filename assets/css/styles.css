@@ -344,6 +344,22 @@ body {
   transform: translate(80%, -50%);
 }
 
+/* Smaller accent glow behind the Features and FAQ headlines */
+.section-glow {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background-color: #2F6BFF;
+  filter: blur(180px);
+  opacity: 0.45;
+  z-index: -1;
+  pointer-events: none;
+}
+
 .hero__image {
   width: 552px;
   max-width: 50%;
