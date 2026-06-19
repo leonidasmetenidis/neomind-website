@@ -390,6 +390,10 @@ body {
   padding: clamp(32px, 5%, 72px);
 }
 
+.problem__eyebrow {
+  align-self: flex-start;
+}
+
 .problem__text {
   margin: 24px 0 0;
   font-family: 'Inter', sans-serif;
