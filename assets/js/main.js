@@ -60,6 +60,34 @@ function applyLanguage(lang) {
 
   if (dict._title) document.title = dict._title;
   document.documentElement.lang = lang;
+
+  renderFaq(lang);
+}
+
+// Build the FAQ list from assets/js/faq-data.js for the given language. Called
+// on every language change so the questions stay in the active language.
+function renderFaq(lang) {
+  const data = window.FAQ_CONTENT;
+  const list = document.querySelector('.faq__list');
+  if (!data || !list) return;
+
+  const headline = document.querySelector('.faq__headline');
+  if (headline && data.headline) {
+    headline.textContent = data.headline[lang] || data.headline.en;
+  }
+
+  const chevron = '<svg class="faq__chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+
+  list.innerHTML = data.items.map(function (item, i) {
+    const t = item[lang] || item.en;
+    const open = i === 0;
+    return '<div class="faq__item' + (open ? ' is-open' : '') + '">' +
+      '<button class="faq__question" type="button" aria-expanded="' + (open ? 'true' : 'false') + '">' +
+      '<span>' + t.q + '</span>' + chevron +
+      '</button>' +
+      '<div class="faq__answer"><p>' + t.a + '</p></div>' +
+      '</div>';
+  }).join('');
 }
 
 // Language switcher dropdown
@@ -137,23 +165,28 @@ function applyLanguage(lang) {
   selectLang(initial, true);
 })();
 
-// FAQ accordion — clicking a question opens it and closes the others.
+// FAQ accordion — clicking a question opens it and closes the others. Uses
+// event delegation so it keeps working after the list is re-rendered on a
+// language change.
 (function () {
-  const items = document.querySelectorAll('.faq__item');
-  if (!items.length) return;
+  const list = document.querySelector('.faq__list');
+  if (!list) return;
 
-  items.forEach(function (item) {
-    const question = item.querySelector('.faq__question');
-    question.addEventListener('click', function () {
-      const willOpen = !item.classList.contains('is-open');
-      items.forEach(function (other) {
-        other.classList.remove('is-open');
-        other.querySelector('.faq__question').setAttribute('aria-expanded', 'false');
-      });
-      if (willOpen) {
-        item.classList.add('is-open');
-        question.setAttribute('aria-expanded', 'true');
-      }
+  list.addEventListener('click', function (e) {
+    const question = e.target.closest('.faq__question');
+    if (!question || !list.contains(question)) return;
+
+    const item = question.closest('.faq__item');
+    const willOpen = !item.classList.contains('is-open');
+
+    list.querySelectorAll('.faq__item').forEach(function (other) {
+      other.classList.remove('is-open');
+      other.querySelector('.faq__question').setAttribute('aria-expanded', 'false');
     });
+
+    if (willOpen) {
+      item.classList.add('is-open');
+      question.setAttribute('aria-expanded', 'true');
+    }
   });
 })();
