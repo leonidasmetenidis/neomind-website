@@ -26,6 +26,9 @@ const translations = {
     cta_headline: 'Nur ein Gedanke trennt dich von einem neuen Leben.',
     cta_subheadline: 'Starte noch heute deine kostenlose Testphase und entdecke die Version von dir, die auf dich gewartet hat.',
     btn_try: 'Kostenlos testen',
+    qr_eyebrow: 'Neomind testen',
+    qr_line1: 'Kostenlos herunterladen, nur einen Scan entfernt.',
+    qr_line2: 'Öffne einfach deine Kamera.',
     footer_pages: 'Seiten',
     footer_home: 'Startseite',
     footer_blog: 'Blog',
@@ -191,4 +194,17 @@ function renderFaq(lang) {
       question.setAttribute('aria-expanded', 'true');
     }
   });
+})();
+
+// QR widget — dismiss button hides it for the rest of the session.
+(function () {
+  const widget = document.querySelector('.qr-widget');
+  if (!widget) return;
+
+  const close = widget.querySelector('.qr-widget__close');
+  if (close) {
+    close.addEventListener('click', function () {
+      widget.classList.add('is-dismissed');
+    });
+  }
 })();
