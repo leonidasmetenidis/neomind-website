@@ -226,6 +226,43 @@
     <p class="footer__copyright" data-i18n="footer_copyright">© Neomind. All rights reserved.</p>
   </footer>
 
+  <!-- Download modal, opened by the header "Try for free" button -->
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="download-modal-title" hidden>
+    <div class="modal__dialog">
+      <button class="modal__close" type="button" aria-label="Close">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>
+      </button>
+
+      <h2 class="modal__title" id="download-modal-title" data-i18n="modal_headline">Download Neomind for free</h2>
+      <p class="modal__text" data-i18n="modal_scan">Open your phone's camera and scan the QR code to start:</p>
+
+      <div class="modal__code" role="img" aria-label="QR code placeholder">
+        <svg viewBox="0 0 25 25" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges" aria-hidden="true">
+          <rect width="25" height="25" fill="#ffffff"/>
+          <!-- finder patterns -->
+          <path fill="#111111" d="M1 1h7v7h-7zM3 3h3v3h-3z"/>
+          <path fill="#111111" d="M17 1h7v7h-7zM19 3h3v3h-3z"/>
+          <path fill="#111111" d="M1 17h7v7h-7zM3 19h3v3h-3z"/>
+          <!-- scattered modules (decorative placeholder, not a real QR) -->
+          <path fill="#111111" d="M10 1h1v1h-1zM12 1h1v1h-1zM14 1h1v1h-1zM11 2h1v1h-1zM13 2h1v1h-1zM10 3h1v1h-1zM14 3h1v1h-1zM12 4h1v1h-1zM10 5h1v1h-1zM13 5h1v1h-1zM15 5h1v1h-1zM11 6h1v1h-1zM14 6h1v1h-1zM10 7h1v1h-1zM12 7h1v1h-1zM1 10h1v1h-1zM3 10h1v1h-1zM5 10h1v1h-1zM7 10h1v1h-1zM2 11h1v1h-1zM4 11h1v1h-1zM6 11h1v1h-1zM1 12h1v1h-1zM3 12h1v1h-1zM5 12h1v1h-1zM7 12h1v1h-1zM2 13h1v1h-1zM4 13h1v1h-1zM6 13h1v1h-1zM1 14h1v1h-1zM3 14h1v1h-1zM10 9h1v1h-1zM12 9h1v1h-1zM15 9h1v1h-1zM17 9h1v1h-1zM19 9h1v1h-1zM22 9h1v1h-1zM11 10h1v1h-1zM13 10h1v1h-1zM16 10h1v1h-1zM18 10h1v1h-1zM21 10h1v1h-1zM23 10h1v1h-1zM10 11h1v1h-1zM14 11h1v1h-1zM17 11h1v1h-1zM20 11h1v1h-1zM22 11h1v1h-1zM12 12h1v1h-1zM15 12h1v1h-1zM18 12h1v1h-1zM21 12h1v1h-1zM23 12h1v1h-1zM10 13h1v1h-1zM13 13h1v1h-1zM16 13h1v1h-1zM19 13h1v1h-1zM22 13h1v1h-1zM11 14h1v1h-1zM14 14h1v1h-1zM17 14h1v1h-1zM20 14h1v1h-1zM23 14h1v1h-1zM10 16h1v1h-1zM12 16h1v1h-1zM14 16h1v1h-1zM16 16h1v1h-1zM18 16h1v1h-1zM20 16h1v1h-1zM22 16h1v1h-1zM11 17h1v1h-1zM13 17h1v1h-1zM15 17h1v1h-1zM19 17h1v1h-1zM21 17h1v1h-1zM23 17h1v1h-1zM10 18h1v1h-1zM14 18h1v1h-1zM17 18h1v1h-1zM20 18h1v1h-1zM22 18h1v1h-1zM12 19h1v1h-1zM15 19h1v1h-1zM18 19h1v1h-1zM21 19h1v1h-1zM23 19h1v1h-1zM10 20h1v1h-1zM13 20h1v1h-1zM16 20h1v1h-1zM19 20h1v1h-1zM22 20h1v1h-1zM11 21h1v1h-1zM14 21h1v1h-1zM17 21h1v1h-1zM20 21h1v1h-1zM23 21h1v1h-1zM10 22h1v1h-1zM12 22h1v1h-1zM15 22h1v1h-1zM18 22h1v1h-1zM21 22h1v1h-1zM23 22h1v1h-1zM11 23h1v1h-1zM14 23h1v1h-1zM16 23h1v1h-1zM19 23h1v1h-1zM22 23h1v1h-1z"/>
+        </svg>
+      </div>
+
+      <p class="modal__text modal__text--or" data-i18n="modal_or">Or get it from your app store:</p>
+
+      <div class="modal__badges">
+        <a href="#" class="hero__badge" aria-label="Download on the App Store">
+          <img src="assets/images/appstore_badge.svg" alt="Download on the App Store">
+        </a>
+        <a href="#" class="hero__badge" aria-label="Get it on Google Play">
+          <img src="assets/images/googleplay_badge.svg" alt="Get it on Google Play">
+        </a>
+      </div>
+    </div>
+  </div>
+
   <!-- QR download widget (placeholder QR — swap in the real code later) -->
   <aside class="qr-widget" aria-label="Scan to try Neomind">
     <button class="qr-widget__close" type="button" aria-label="Dismiss">

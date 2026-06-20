@@ -29,6 +29,9 @@ const translations = {
     qr_eyebrow: 'Neomind testen',
     qr_line1: 'Kostenlos herunterladen, nur einen Scan entfernt.',
     qr_line2: 'Öffne einfach deine Kamera.',
+    modal_headline: 'Neomind kostenlos herunterladen',
+    modal_scan: 'Öffne die Kamera deines Handys und scanne den QR-Code, um zu starten:',
+    modal_or: 'Oder hol dir die App in deinem App-Store:',
     footer_pages: 'Seiten',
     footer_home: 'Startseite',
     footer_blog: 'Blog',
@@ -207,4 +210,39 @@ function renderFaq(lang) {
       widget.classList.add('is-dismissed');
     });
   }
+})();
+
+// Download modal — opened by the header "Try for free" button.
+(function () {
+  const modal = document.querySelector('.modal');
+  const trigger = document.querySelector('.btn-try');
+  if (!modal || !trigger) return;
+
+  const closeBtn = modal.querySelector('.modal__close');
+
+  function open() {
+    modal.hidden = false;
+    // Force reflow so the opening transition runs from the hidden state.
+    void modal.offsetWidth;
+    modal.classList.add('is-open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function close() {
+    modal.classList.remove('is-open');
+    document.body.style.overflow = '';
+    setTimeout(function () { modal.hidden = true; }, 200);
+  }
+
+  trigger.addEventListener('click', open);
+  closeBtn.addEventListener('click', close);
+
+  // Click on the dimmed backdrop (outside the dialog) closes it.
+  modal.addEventListener('click', function (e) {
+    if (e.target === modal) close();
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && !modal.hidden) close();
+  });
 })();
