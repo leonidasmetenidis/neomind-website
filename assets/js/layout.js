@@ -63,16 +63,16 @@
         '<nav class="footer__col" aria-label="Pages">' +
           '<h3 class="footer__heading" data-i18n="footer_pages">Pages</h3>' +
           '<a href="' + BASE + 'index.html" class="footer__link" data-i18n="footer_home">Home</a>' +
-          '<a href="#" class="footer__link" data-i18n="footer_blog">Blog</a>' +
-          '<a href="#" class="footer__link" data-i18n="footer_help">Help</a>' +
-          '<a href="#" class="footer__link" data-i18n="footer_about">About us</a>' +
+          '<a href="' + BASE + 'blog/index.html" class="footer__link" data-i18n="footer_blog">Blog</a>' +
+          '<a href="' + BASE + 'help/index.html" class="footer__link" data-i18n="footer_help">Help</a>' +
+          '<a href="' + BASE + 'about/index.html" class="footer__link" data-i18n="footer_about">About us</a>' +
         '</nav>' +
         '<nav class="footer__col" aria-label="Legal">' +
           '<h3 class="footer__heading" data-i18n="footer_legal">Legal</h3>' +
           '<a href="' + BASE + 'terms/index.html" class="footer__link" data-i18n="footer_terms">Terms of Service</a>' +
-          '<a href="#" class="footer__link" data-i18n="footer_privacy">Privacy policy</a>' +
-          '<a href="#" class="footer__link" data-i18n="footer_cookie">Cookie Policy</a>' +
-          '<a href="#" class="footer__link" data-i18n="footer_notice">Legal Notice</a>' +
+          '<a href="' + BASE + 'privacy/index.html" class="footer__link" data-i18n="footer_privacy">Privacy policy</a>' +
+          '<a href="' + BASE + 'cookies/index.html" class="footer__link" data-i18n="footer_cookie">Cookie Policy</a>' +
+          '<a href="' + BASE + 'legal-notice/index.html" class="footer__link" data-i18n="footer_notice">Legal Notice</a>' +
         '</nav>' +
         '<div class="footer__col">' +
           '<h3 class="footer__heading" data-i18n="footer_getapp">Get the app</h3>' +

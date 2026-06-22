@@ -8,15 +8,19 @@ but they currently point to `#` — wire each `href` up as the page lands.
 - [x] **/download redirect** — `download/index.html` (device-detecting store redirect)
 
 ## 📄 Legal (highest priority — needed before launch)
-- [x] **Terms of Service** — `terms/index.html` → footer link `footer_terms` (scaffold: header + headline only)
-- [ ] **Privacy Policy** — `privacy/index.html` → footer link `footer_privacy`
-- [ ] **Cookie Policy** — `cookies/index.html` → footer link `footer_cookie`
-- [ ] **Legal Notice / Impressum** — `legal-notice/index.html` → footer link `footer_notice`
+Every page below has a scaffold (shared chrome + headline) and a wired-up
+footer link, but is still **empty** — the actual body copy is unwritten.
+Leave the box unchecked until the real content lands.
+
+- [ ] **Terms of Service** — `terms/index.html` → footer link `footer_terms` (scaffold only)
+- [ ] **Privacy Policy** — `privacy/index.html` → footer link `footer_privacy` (scaffold only)
+- [ ] **Cookie Policy** — `cookies/index.html` → footer link `footer_cookie` (scaffold only)
+- [ ] **Legal Notice / Impressum** — `legal-notice/index.html` → footer link `footer_notice` (scaffold only)
 
 ## 📄 Content pages
-- [ ] **About us** — `about/index.html` → footer link `footer_about`
-- [ ] **Help** — `help/index.html` → footer link `footer_help`
-- [ ] **Blog** — `blog/index.html` → footer link `footer_blog`
+- [ ] **About us** — `about/index.html` → footer link `footer_about` (scaffold only)
+- [ ] **Help** — `help/index.html` → footer link `footer_help` (scaffold only)
+- [ ] **Blog** — `blog/index.html` → footer link `footer_blog` (scaffold only)
       (decide: single page, or index + individual posts?)
 
 ## How to add a new page
