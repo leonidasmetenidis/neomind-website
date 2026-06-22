@@ -96,6 +96,35 @@ function applyLanguage(lang) {
   document.documentElement.lang = lang;
 
   renderFaq(lang);
+  renderLegal(lang);
+}
+
+// Build a legal document (Privacy Policy or Terms of Service) from
+// assets/js/legal-data.js into the [data-legal] container of the current page.
+// Called on every language change so the text stays in the active language.
+// No-op on pages without a [data-legal] container.
+function renderLegal(lang) {
+  const host = document.querySelector('[data-legal]');
+  const data = window.LEGAL_CONTENT;
+  if (!host || !data) return;
+
+  const doc = data[host.dataset.legal];
+  if (!doc) return;
+
+  const pick = function (entry) { return entry[lang] || entry.en; };
+
+  let html = '<p class="legal__lead">' + pick(doc.meta.updated) + '</p>' +
+    '<div class="legal__note">' + pick(doc.meta.note) + '</div>';
+
+  html += doc.sections.map(function (section) {
+    const content = pick(section);
+    return '<section class="legal__section">' +
+      '<h2 class="legal__subhead">' + content.head + '</h2>' +
+      content.body +
+      '</section>';
+  }).join('');
+
+  host.innerHTML = html;
 }
 
 // Build the FAQ list from assets/js/faq-data.js for the given language. Called

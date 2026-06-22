@@ -1226,6 +1226,53 @@ body {
   text-decoration: underline;
 }
 
+/* Legal document body rendered from assets/js/legal-data.js by renderLegal().
+   The .legal__doc rules style the plain HTML in each section's body so the
+   data file can stay free of per-element classes. */
+.legal__note {
+  margin: 28px 0 0;
+  padding: 16px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.legal__doc p {
+  margin: 16px 0 0;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.legal__doc ul {
+  margin: 12px 0 0;
+  padding-left: 22px;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.legal__doc li {
+  margin: 6px 0 0;
+}
+
+.legal__doc strong {
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+.legal__doc a {
+  color: #A35BF2;
+  text-decoration: none;
+}
+
+.legal__doc a:hover {
+  text-decoration: underline;
+}
+
 @media (max-width: 768px) {
   .legal {
     padding: 120px 24px 64px;

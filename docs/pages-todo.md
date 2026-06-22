@@ -12,8 +12,8 @@ Every page below has a scaffold (shared chrome + headline) and a wired-up
 footer link, but is still **empty** — the actual body copy is unwritten.
 Leave the box unchecked until the real content lands.
 
-- [ ] **Terms of Service** — `terms/index.html` → footer link `footer_terms` (scaffold only)
-- [ ] **Privacy Policy** — `privacy/index.html` → footer link `footer_privacy` (scaffold only)
+- [x] **Terms of Service** — `terms/index.html` → footer link `footer_terms` (content written, EN + DE; rendered from `assets/js/legal-data.js`)
+- [x] **Privacy Policy** — `privacy/index.html` → footer link `footer_privacy` (content written, EN + DE; rendered from `assets/js/legal-data.js`)
 - [ ] **Cookie Policy** — `cookies/index.html` → footer link `footer_cookie` (scaffold only)
 - [x] **Legal Notice / Impressum** — `legal-notice/index.html` → footer link `footer_notice` (content written, EN + DE)
 
@@ -35,7 +35,14 @@ A new page only needs its own `<head>`, its own content, and these scripts:
 ```
 
 (`config.js` = store links, `main.js` = behaviour. Add `faq-data.js` only on
-pages that render the FAQ.) Use `terms/index.html` as the template to copy.
+pages that render the FAQ; add `legal-data.js` only on the legal pages that
+render a long document — Terms and Privacy.) Use `terms/index.html` as the
+template to copy.
+
+The Terms and Privacy bodies are **not** hand-written in the HTML: the page
+holds only the headline plus an empty `<div class="legal__doc" data-legal="…">`,
+and `renderLegal()` in `main.js` fills it from `assets/js/legal-data.js` in the
+active language (EN read from the data file's `en` entries, DE from `de`).
 
 ## Notes
 - Each footer link has a `data-i18n` key (e.g. `footer_terms`); remember to add

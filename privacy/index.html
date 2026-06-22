@@ -15,10 +15,13 @@
        assets/js/layout.js — see index.html. -->
   <main class="legal">
     <h1 class="headline legal__headline" data-i18n="privacy_headline">Privacy Policy</h1>
+    <!-- Body is rendered from assets/js/legal-data.js by renderLegal() in main.js. -->
+    <div class="legal__doc" data-legal="privacy"></div>
   </main>
 
   <script src="../assets/js/layout.js"></script>
   <script src="../assets/js/config.js"></script>
+  <script src="../assets/js/legal-data.js"></script>
   <script src="../assets/js/main.js"></script>
 </body>
 </html>
