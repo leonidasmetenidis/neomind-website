@@ -40,6 +40,15 @@ them there updates every badge across the site *and* the `/download` redirect.
   (`privacy/index.html`). Localize the banner copy EN + DE like the rest of
   the site.
 
+## 🔗 Social links in the footer
+
+The footer social icons currently point to `href="#"` placeholders
+(`assets/js/layout.js`). Replace each with the real profile URL.
+
+- [ ] **Set the TikTok URL** on the footer TikTok link.
+- [ ] **Set the Instagram URL** on the footer Instagram link.
+- [ ] **Set the YouTube URL** on the footer YouTube link.
+
 ## Notes
 
 - The redirect page is marked `noindex` so search engines don't list it.
