@@ -55,7 +55,7 @@ const translations = {
     notice_dispute_body: 'Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.<br><br>Hinweis: Die Online-Streitbeilegungs-Plattform (OS-Plattform) der Europäischen Kommission wurde zum 20. Juli 2025 eingestellt und wird daher hier nicht mehr angegeben.',
     about_headline: 'Über uns',
     contact_headline: 'Kontakt',
-    contact_intro: 'Brauchst du Hilfe, hast du einen Fehler gefunden oder eine Idee für ein Feature? Schreib uns – wir antworten innerhalb von 24 Stunden.',
+    contact_intro: 'Brauchst du Hilfe, hast du einen Fehler gefunden oder eine Idee für ein Feature? Schreib uns, wir antworten innerhalb von 24 Stunden.',
     contact_email: 'E-Mail: <a href="mailto:neomind.help@gmail.com">neomind.help@gmail.com</a>',
     blog_headline: 'Blog',
     footer_pages: 'Seiten',
