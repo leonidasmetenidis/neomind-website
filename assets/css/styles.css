@@ -1209,6 +1209,14 @@ body {
   line-height: 1.7;
 }
 
+.legal__headline + .legal__text {
+  margin-top: 28px;
+}
+
+.legal__text + .legal__text {
+  margin-top: 16px;
+}
+
 .legal__text a {
   color: #A35BF2;
   text-decoration: none;
