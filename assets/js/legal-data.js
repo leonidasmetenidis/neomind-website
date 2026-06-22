@@ -92,7 +92,7 @@ window.LEGAL_CONTENT = {
 </ul>
 <p><strong>5.2 User-generated content</strong></p>
 <ul>
-<li>Content you create or upload, such as custom affirmations and visualizations, categories and sets, vision board items, recorded audio, uploaded images, videos, and background music</li>
+<li>Content you create or upload, such as custom affirmations and visualizations, categories and sets, recorded audio, uploaded images, videos, and background music</li>
 <li>Favourites and other personalisation choices</li>
 </ul>
 <p><strong>5.3 AI generation data</strong></p>
@@ -138,7 +138,7 @@ window.LEGAL_CONTENT = {
 </ul>
 <p><strong>5.2 Nutzergenerierte Inhalte</strong></p>
 <ul>
-<li>Inhalte, die du erstellst oder hochlädst, etwa eigene Affirmationen und Visualisierungen, Kategorien und Sets, Vision-Board-Elemente, aufgenommene Audiodateien, hochgeladene Bilder, Videos und Hintergrundmusik</li>
+<li>Inhalte, die du erstellst oder hochlädst, etwa eigene Affirmationen und Visualisierungen, Kategorien und Sets, aufgenommene Audiodateien, hochgeladene Bilder, Videos und Hintergrundmusik</li>
 <li>Favoriten und andere Personalisierungsentscheidungen</li>
 </ul>
 <p><strong>5.3 Daten zur KI-Generierung</strong></p>
@@ -777,8 +777,8 @@ window.LEGAL_CONTENT = {
           head: '2. Description of the Service',
           body: `<p>2.1 Neomind is a subscription-based mental wellness application designed to support personal growth and mindset habits. It provides, among other things:</p>
 <ul>
-<li>(a) curated, built-in content such as affirmations, guided visualizations, vision board materials, "Mini Moments" prompts, and mindset resources;</li>
-<li>(b) tools to create, organise, and personalise your own content, including custom affirmations, visualizations, categories, sets, vision boards, recorded audio, and uploaded images, videos, and background music;</li>
+<li>(a) curated, built-in content such as affirmations, guided visualizations, "Mini Moments" prompts, and mindset resources;</li>
+<li>(b) tools to create, organise, and personalise your own content, including custom affirmations, visualizations, categories, sets, recorded audio, and uploaded images, videos, and background music;</li>
 <li>(c) AI-assisted content generation that lets you generate text content based on your input (see Section 9);</li>
 <li>(d) a full-screen, gesture-based practice mode with text-to-speech, background music, favourites, reminders, themes, and home-screen and lock-screen widgets.</li>
 </ul>
@@ -789,8 +789,8 @@ window.LEGAL_CONTENT = {
           head: '2. Beschreibung des Dienstes',
           body: `<p>2.1 Neomind ist eine abonnementbasierte Anwendung für mentales Wohlbefinden, die persönliches Wachstum und Mindset-Gewohnheiten unterstützen soll. Sie bietet unter anderem:</p>
 <ul>
-<li>(a) kuratierte, integrierte Inhalte wie Affirmationen, geführte Visualisierungen, Vision-Board-Materialien, „Mini Moments"-Impulse und Mindset-Ressourcen;</li>
-<li>(b) Werkzeuge, um eigene Inhalte zu erstellen, zu organisieren und zu personalisieren, einschließlich eigener Affirmationen, Visualisierungen, Kategorien, Sets, Vision Boards, aufgenommener Audiodateien sowie hochgeladener Bilder, Videos und Hintergrundmusik;</li>
+<li>(a) kuratierte, integrierte Inhalte wie Affirmationen, geführte Visualisierungen, „Mini Moments"-Impulse und Mindset-Ressourcen;</li>
+<li>(b) Werkzeuge, um eigene Inhalte zu erstellen, zu organisieren und zu personalisieren, einschließlich eigener Affirmationen, Visualisierungen, Kategorien, Sets, aufgenommener Audiodateien sowie hochgeladener Bilder, Videos und Hintergrundmusik;</li>
 <li>(c) KI-gestützte Inhaltserstellung, mit der du auf Grundlage deiner Eingaben Textinhalte generieren kannst (siehe Abschnitt 9);</li>
 <li>(d) einen Vollbild-Übungsmodus mit Gestensteuerung, Text-to-Speech, Hintergrundmusik, Favoriten, Erinnerungen, Designs sowie Homescreen- und Sperrbildschirm-Widgets.</li>
 </ul>
