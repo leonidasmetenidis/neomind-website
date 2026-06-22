@@ -1169,3 +1169,24 @@ body {
 .modal__badges img {
   height: 44px;
 }
+
+/* ==========================================================================
+   Legal / content pages (Terms, Privacy, Cookie Policy, Legal Notice…)
+   ========================================================================== */
+.legal {
+  position: relative;
+  z-index: 1;
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 140px 48px 80px;
+}
+
+.legal__headline {
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .legal {
+    padding: 120px 24px 64px;
+  }
+}
