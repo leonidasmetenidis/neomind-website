@@ -2,7 +2,14 @@
 // drifts out of sync with the markup.
 const translations = {
   de: {
-    _title: 'Neomind · KI-gestützte Mindset-App',
+    title_home: 'Neomind · KI-gestützte Mindset-App',
+    title_terms: 'Allgemeine Geschäftsbedingungen · Neomind',
+    title_privacy: 'Datenschutzerklärung · Neomind',
+    title_cookie: 'Cookie-Richtlinie · Neomind',
+    title_notice: 'Impressum · Neomind',
+    title_about: 'Über uns · Neomind',
+    title_contact: 'Kontakt · Neomind',
+    title_blog: 'Blog · Neomind',
     hero_eyebrow: 'KI-gestützte Anwendung',
     hero_headline: 'Entwickle ein Mindset,<br>das dein Leben verändert.',
     hero_subheadline: 'Neomind verbindet Affirmationen und Visualisierung mit intelligenter KI für dein Mindset. Entwickelt, um dir zu helfen, größer zu denken, dich besser zu fühlen und genau das Leben zu führen, das du dir wünschst.',
@@ -36,12 +43,12 @@ const translations = {
     cookie_headline: 'Cookie-Richtlinie',
     notice_headline: 'Impressum',
     about_headline: 'Über uns',
-    help_headline: 'Hilfe',
+    contact_headline: 'Kontakt',
     blog_headline: 'Blog',
     footer_pages: 'Seiten',
     footer_home: 'Startseite',
     footer_blog: 'Blog',
-    footer_help: 'Hilfe',
+    footer_contact: 'Kontakt',
     footer_about: 'Über uns',
     footer_legal: 'Rechtliches',
     footer_terms: 'Allgemeine Geschäftsbedingungen',
@@ -53,8 +60,9 @@ const translations = {
   },
 };
 
-// Capture the original English content straight from the DOM.
-const english = { _title: document.title };
+// Capture the original English content straight from the DOM. The <title> is
+// a data-i18n element too, so the page title is localized like everything else.
+const english = {};
 document.querySelectorAll('[data-i18n]').forEach(function (el) {
   english[el.dataset.i18n] = el.innerHTML;
 });
@@ -72,7 +80,6 @@ function applyLanguage(lang) {
     el.src = el.src.replace(/assets\/images\/[a-z]{2}\//, 'assets/images/' + lang + '/');
   });
 
-  if (dict._title) document.title = dict._title;
   document.documentElement.lang = lang;
 
   renderFaq(lang);

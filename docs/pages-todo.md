@@ -19,7 +19,7 @@ Leave the box unchecked until the real content lands.
 
 ## 📄 Content pages
 - [ ] **About us** — `about/index.html` → footer link `footer_about` (scaffold only)
-- [ ] **Help** — `help/index.html` → footer link `footer_help` (scaffold only)
+- [ ] **Contact us** — `contact/index.html` → footer link `footer_contact` (scaffold only)
 - [ ] **Blog** — `blog/index.html` → footer link `footer_blog` (scaffold only)
       (decide: single page, or index + individual posts?)
 
