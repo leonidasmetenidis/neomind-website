@@ -30,6 +30,16 @@ them there updates every badge across the site *and* the `/download` redirect.
 - [ ] (Optional) Confirm UTM params pass through, e.g.
   `getneomind.com/download?utm_source=tiktok` carries through to the store URL.
 
+## 🍪 Cookie consent banner
+
+- [ ] **Add a cookie consent banner.** Required before launch (GDPR / TTDSG)
+  if the site sets any non-essential cookies or loads third-party scripts
+  (analytics, embeds, store-redirect tracking, etc.). It must let visitors
+  accept or reject non-essential cookies *before* those scripts run, and
+  should link to the Cookie Policy (`cookies/index.html`) and Privacy Policy
+  (`privacy/index.html`). Localize the banner copy EN + DE like the rest of
+  the site.
+
 ## Notes
 
 - The redirect page is marked `noindex` so search engines don't list it.
