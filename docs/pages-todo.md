@@ -15,7 +15,7 @@ Leave the box unchecked until the real content lands.
 - [ ] **Terms of Service** — `terms/index.html` → footer link `footer_terms` (scaffold only)
 - [ ] **Privacy Policy** — `privacy/index.html` → footer link `footer_privacy` (scaffold only)
 - [ ] **Cookie Policy** — `cookies/index.html` → footer link `footer_cookie` (scaffold only)
-- [ ] **Legal Notice / Impressum** — `legal-notice/index.html` → footer link `footer_notice` (scaffold only)
+- [x] **Legal Notice / Impressum** — `legal-notice/index.html` → footer link `footer_notice` (content written, EN + DE)
 
 ## 📄 Content pages
 - [ ] **About us** — `about/index.html` → footer link `footer_about` (scaffold only)

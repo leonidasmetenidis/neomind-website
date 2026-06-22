@@ -1185,6 +1185,39 @@ body {
   margin: 0;
 }
 
+.legal__lead {
+  margin: 16px 0 0;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 15px;
+}
+
+.legal__section {
+  margin-top: 40px;
+}
+
+.legal__subhead {
+  margin: 0 0 12px;
+  color: #FFFFFF;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.legal__text {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.legal__text a {
+  color: #A35BF2;
+  text-decoration: none;
+}
+
+.legal__text a:hover {
+  text-decoration: underline;
+}
+
 @media (max-width: 768px) {
   .legal {
     padding: 120px 24px 64px;
