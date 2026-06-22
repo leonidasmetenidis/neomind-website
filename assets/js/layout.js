@@ -73,6 +73,7 @@
           '<a href="' + BASE + 'privacy/index.html" class="footer__link" data-i18n="footer_privacy">Privacy policy</a>' +
           '<a href="' + BASE + 'cookies/index.html" class="footer__link" data-i18n="footer_cookie">Cookie Policy</a>' +
           '<a href="' + BASE + 'legal-notice/index.html" class="footer__link" data-i18n="footer_notice">Legal Notice</a>' +
+          '<button type="button" class="footer__link footer__link--btn" data-cc-open data-i18n="footer_cookie_settings">Cookie settings</button>' +
         '</nav>' +
         '<div class="footer__col">' +
           '<h3 class="footer__heading" data-i18n="footer_getapp">Get the app</h3>' +
@@ -133,6 +134,68 @@
       '<p class="qr-widget__caption"><span data-i18n="qr_line1">Scan with your camera to get the app for free.</span></p>' +
     '</aside>';
 
+  // GDPR cookie consent banner. Hidden by default; assets/js/cookie-consent.js
+  // decides whether to show it (first visit / no stored choice) and handles the
+  // accept / reject / per-category logic. Non-essential cookies stay off until
+  // the visitor consents. Policy links use BASE so they resolve from any page.
+  var cookieBanner =
+    '<div class="cookie-consent" role="dialog" aria-modal="false" aria-labelledby="cc-title" hidden>' +
+      '<div class="cookie-consent__dialog">' +
+
+        '<div class="cookie-consent__view" data-cc-view="main">' +
+          '<h2 class="cookie-consent__title" id="cc-title" data-i18n="cc_title">We value your privacy</h2>' +
+          '<p class="cookie-consent__text" data-i18n="cc_text">We use cookies to keep this site running and, only with your consent, to analyse usage and measure our marketing. You can accept all, reject all, or choose which cookies to allow.</p>' +
+          '<p class="cookie-consent__links">' +
+            '<a class="cookie-consent__link" href="' + BASE + 'cookies/index.html" data-i18n="cc_link_cookie">Cookie Policy</a>' +
+            '<span class="cookie-consent__dot" aria-hidden="true">·</span>' +
+            '<a class="cookie-consent__link" href="' + BASE + 'privacy/index.html" data-i18n="cc_link_privacy">Privacy Policy</a>' +
+          '</p>' +
+          '<div class="cookie-consent__actions">' +
+            '<button class="cookie-consent__btn cookie-consent__btn--ghost" type="button" data-cc-action="reject" data-i18n="cc_reject">Reject all</button>' +
+            '<button class="cookie-consent__btn cookie-consent__btn--secondary" type="button" data-cc-action="customize" data-i18n="cc_customize">Customize</button>' +
+            '<button class="cookie-consent__btn cookie-consent__btn--primary" type="button" data-cc-action="accept" data-i18n="cc_accept">Accept all</button>' +
+          '</div>' +
+        '</div>' +
+
+        '<div class="cookie-consent__view" data-cc-view="prefs" hidden>' +
+          '<h2 class="cookie-consent__title" data-i18n="cc_prefs_title">Manage your preferences</h2>' +
+          '<div class="cookie-consent__cat">' +
+            '<div class="cookie-consent__cat-head">' +
+              '<span class="cookie-consent__cat-title" data-i18n="cc_cat_necessary">Strictly necessary</span>' +
+              '<span class="cookie-consent__always" data-i18n="cc_always_on">Always on</span>' +
+            '</div>' +
+            '<p class="cookie-consent__cat-desc" data-i18n="cc_cat_necessary_desc">Required for the website to work, for example to remember your cookie choices and language. These cannot be switched off.</p>' +
+          '</div>' +
+          '<div class="cookie-consent__cat">' +
+            '<div class="cookie-consent__cat-head">' +
+              '<span class="cookie-consent__cat-title" data-i18n="cc_cat_analytics">Analytics</span>' +
+              '<label class="cookie-consent__switch">' +
+                '<input type="checkbox" data-cc-category="analytics">' +
+                '<span class="cookie-consent__slider"></span>' +
+              '</label>' +
+            '</div>' +
+            '<p class="cookie-consent__cat-desc" data-i18n="cc_cat_analytics_desc">Help us understand how the site is used so we can improve it. Loaded only if you allow them.</p>' +
+          '</div>' +
+          '<div class="cookie-consent__cat">' +
+            '<div class="cookie-consent__cat-head">' +
+              '<span class="cookie-consent__cat-title" data-i18n="cc_cat_advertising">Advertising</span>' +
+              '<label class="cookie-consent__switch">' +
+                '<input type="checkbox" data-cc-category="advertising">' +
+                '<span class="cookie-consent__slider"></span>' +
+              '</label>' +
+            '</div>' +
+            '<p class="cookie-consent__cat-desc" data-i18n="cc_cat_advertising_desc">Used to measure our marketing and show more relevant ads. Loaded only if you allow them.</p>' +
+          '</div>' +
+          '<div class="cookie-consent__actions">' +
+            '<button class="cookie-consent__btn cookie-consent__btn--ghost" type="button" data-cc-action="reject" data-i18n="cc_reject">Reject all</button>' +
+            '<button class="cookie-consent__btn cookie-consent__btn--secondary" type="button" data-cc-action="save" data-i18n="cc_save">Save choices</button>' +
+            '<button class="cookie-consent__btn cookie-consent__btn--primary" type="button" data-cc-action="accept" data-i18n="cc_accept">Accept all</button>' +
+          '</div>' +
+        '</div>' +
+
+      '</div>' +
+    '</div>';
+
   document.body.insertAdjacentHTML('afterbegin', header);
-  document.body.insertAdjacentHTML('beforeend', footer + modal + qrWidget);
+  document.body.insertAdjacentHTML('beforeend', footer + modal + qrWidget + cookieBanner);
 })();

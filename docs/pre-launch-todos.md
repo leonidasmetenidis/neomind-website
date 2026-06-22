@@ -32,13 +32,26 @@ them there updates every badge across the site *and* the `/download` redirect.
 
 ## 🍪 Cookie consent banner
 
-- [ ] **Add a cookie consent banner.** Required before launch (GDPR / TTDSG)
-  if the site sets any non-essential cookies or loads third-party scripts
-  (analytics, embeds, store-redirect tracking, etc.). It must let visitors
-  accept or reject non-essential cookies *before* those scripts run, and
-  should link to the Cookie Policy (`cookies/index.html`) and Privacy Policy
-  (`privacy/index.html`). Localize the banner copy EN + DE like the rest of
-  the site.
+- [x] **Cookie consent banner built.** Lives in `assets/js/cookie-consent.js`
+  (logic) + `assets/js/layout.js` (markup) + `.cookie-consent` styles in
+  `styles.css`. Shows on first visit, offers Accept all / Reject all / Customize
+  (per-category toggles for Analytics and Advertising, both off by default),
+  stores the choice in `localStorage`, links to the Cookie & Privacy policies,
+  and is localized EN + DE. A "Cookie settings" footer link re-opens it so
+  visitors can change or withdraw consent. Bump `CONSENT_VERSION` to re-ask
+  everyone after a material change.
+
+- [ ] **Wire the actual tracking scripts into consent.** No third-party scripts
+  load yet. When analytics/ads go live, add each one inside `applyConsent()` in
+  `assets/js/cookie-consent.js`, gated by the matching category
+  (`categories.analytics` / `categories.advertising`); see the `TODO` markers.
+  This guarantees nothing fires before consent. Keep the tools listed in the
+  Cookie Policy (`cookies/index.html`, Section 5) in sync with what you add.
+
+- [ ] **Click-test the banner in a real browser** (not done yet; no browser
+  tooling in the dev env): first visit shows it; Accept/Reject/Save each persist
+  across reloads; the footer "Cookie settings" link re-opens it; EN/DE copy
+  switches with the language selector; mobile layout looks right.
 
 ## 🔗 Social links in the footer
 

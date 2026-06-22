@@ -535,6 +535,213 @@ window.LEGAL_CONTENT = {
     ],
   },
 
+  cookie: {
+    meta: {
+      updated: {
+        en: 'Last updated: 22 June 2026 · Effective date: 22 June 2026',
+        de: 'Zuletzt aktualisiert: 22. Juni 2026 · Gültig ab: 22. Juni 2026',
+      },
+      note: {
+        en: 'This Cookie Policy explains how cookies and similar technologies are used on our website (getneomind.com) and, where relevant, in the Neomind mobile app. It is drafted to align with the EU General Data Protection Regulation (GDPR) and the German Telecommunications Digital Services Data Protection Act (TDDDG). Cookies and similar technologies that are not strictly necessary are only used after you have given your consent, which you can withdraw at any time. This policy should be read together with our <a href="../privacy/">Privacy Policy</a>.',
+        de: 'Diese Cookie-Richtlinie erläutert, wie Cookies und ähnliche Technologien auf unserer Website (getneomind.com) und, soweit relevant, in der mobilen Neomind-App eingesetzt werden. Sie ist darauf ausgerichtet, im Einklang mit der EU-Datenschutz-Grundverordnung (DSGVO) und dem Telekommunikation-Digitale-Dienste-Datenschutz-Gesetz (TDDDG) zu stehen. Cookies und ähnliche Technologien, die nicht unbedingt erforderlich sind, werden erst eingesetzt, nachdem du deine Einwilligung erteilt hast; diese kannst du jederzeit widerrufen. Diese Richtlinie ist zusammen mit unserer <a href="../privacy/">Datenschutzerklärung</a> zu lesen.',
+      },
+    },
+    sections: [
+      {
+        en: {
+          head: '1. Controller and Contact',
+          body: `<p>The party responsible for the use of cookies and similar technologies described here, within the meaning of Article 4(7) GDPR, is:</p>
+<p>Leonidas Metenidis<br>Business designation: Neomind<br>Saligstraße 10, 63069 Offenbach am Main, Germany<br><br>Email: <a href="mailto:neomind.help@gmail.com">neomind.help@gmail.com</a><br>Website: <a href="https://getneomind.com">https://getneomind.com</a></p>
+<p>For any questions about this Cookie Policy, please contact us at neomind.help@gmail.com.</p>`,
+        },
+        de: {
+          head: '1. Verantwortlicher und Kontakt',
+          body: `<p>Verantwortlicher für die hier beschriebene Verwendung von Cookies und ähnlichen Technologien im Sinne von Art. 4 Abs. 7 DSGVO ist:</p>
+<p>Leonidas Metenidis<br>Geschäftsbezeichnung: Neomind<br>Saligstraße 10, 63069 Offenbach am Main, Deutschland<br><br>E-Mail: <a href="mailto:neomind.help@gmail.com">neomind.help@gmail.com</a><br>Website: <a href="https://getneomind.com">https://getneomind.com</a></p>
+<p>Bei Fragen zu dieser Cookie-Richtlinie kannst du uns jederzeit unter neomind.help@gmail.com erreichen.</p>`,
+        },
+      },
+      {
+        en: {
+          head: '2. What Are Cookies and Similar Technologies?',
+          body: `<p>Cookies are small text files that a website stores on your device (computer, tablet, or smartphone) when you visit it. They are widely used to make websites work, to remember your choices, and to provide information to the website operator.</p>
+<p>We use the term "cookies" in this policy to also cover similar technologies that store information on, or read information from, your device, such as:</p>
+<ul>
+<li><strong>Local storage</strong> and session storage in your browser (for example, to remember your selected language);</li>
+<li><strong>Pixels and tags</strong> (small pieces of code, e.g. tracking pixels) used for analytics and advertising measurement;</li>
+<li><strong>Software development kits (SDKs)</strong> and on-device storage used by the Neomind mobile app (see Section 7).</li>
+</ul>
+<p>Cookies can be "first-party" (set by us) or "third-party" (set by a provider whose service we embed). They can be "session" cookies, which are deleted when you close your browser, or "persistent" cookies, which remain for a set period or until you delete them.</p>`,
+        },
+        de: {
+          head: '2. Was sind Cookies und ähnliche Technologien?',
+          body: `<p>Cookies sind kleine Textdateien, die eine Website beim Besuch auf deinem Gerät (Computer, Tablet oder Smartphone) speichert. Sie werden weithin eingesetzt, damit Websites funktionieren, um deine Entscheidungen zu speichern und um dem Website-Betreiber Informationen bereitzustellen.</p>
+<p>Wir verwenden den Begriff „Cookies" in dieser Richtlinie auch für ähnliche Technologien, die Informationen auf deinem Gerät speichern oder von ihm auslesen, etwa:</p>
+<ul>
+<li><strong>Local Storage</strong> und Session Storage in deinem Browser (zum Beispiel, um deine gewählte Sprache zu speichern);</li>
+<li><strong>Pixel und Tags</strong> (kleine Code-Bestandteile, z. B. Tracking-Pixel) für Analyse und Werbemessung;</li>
+<li><strong>Software Development Kits (SDKs)</strong> und gerätelokale Speicherung der mobilen Neomind-App (siehe Abschnitt 7).</li>
+</ul>
+<p>Cookies können „Erstanbieter-Cookies" (von uns gesetzt) oder „Drittanbieter-Cookies" (von einem Anbieter gesetzt, dessen Dienst wir einbinden) sein. Es gibt „Session-Cookies", die beim Schließen des Browsers gelöscht werden, und „persistente Cookies", die für einen festgelegten Zeitraum oder bis zu ihrer Löschung erhalten bleiben.</p>`,
+        },
+      },
+      {
+        en: {
+          head: '3. Legal Basis for Using Cookies',
+          body: `<p>The legal basis for using cookies depends on their purpose:</p>
+<ul>
+<li><strong>Strictly necessary cookies</strong> (Section 4.1) are used to provide a service you have expressly requested. Storing and reading this information is permitted without consent under § 25(2) TDDDG, and the related processing of personal data is based on our legitimate interest in operating a secure and functional website, Art. 6(1)(f) GDPR.</li>
+<li><strong>All other cookies</strong>, in particular preference, analytics, and advertising cookies (Sections 4.2 to 4.4), are not strictly necessary. We store or access them on your device only with your prior consent under § 25(1) TDDDG, and we process the related personal data on the basis of your consent under Art. 6(1)(a) GDPR.</li>
+</ul>
+<p>You give your consent through our cookie banner and can change or withdraw it at any time with effect for the future (see Section 8). Withdrawing consent does not affect the lawfulness of processing carried out before the withdrawal.</p>`,
+        },
+        de: {
+          head: '3. Rechtsgrundlage für den Einsatz von Cookies',
+          body: `<p>Die Rechtsgrundlage für den Einsatz von Cookies hängt von ihrem Zweck ab:</p>
+<ul>
+<li><strong>Unbedingt erforderliche Cookies</strong> (Abschnitt 4.1) werden eingesetzt, um einen von dir ausdrücklich gewünschten Dienst bereitzustellen. Das Speichern und Auslesen dieser Informationen ist nach § 25 Abs. 2 TDDDG ohne Einwilligung zulässig, und die damit verbundene Verarbeitung personenbezogener Daten stützt sich auf unser berechtigtes Interesse am Betrieb einer sicheren und funktionsfähigen Website, Art. 6 Abs. 1 lit. f DSGVO.</li>
+<li><strong>Alle anderen Cookies</strong>, insbesondere Präferenz-, Analyse- und Werbe-Cookies (Abschnitte 4.2 bis 4.4), sind nicht unbedingt erforderlich. Wir speichern sie auf deinem Gerät oder greifen darauf nur mit deiner vorherigen Einwilligung nach § 25 Abs. 1 TDDDG zu und verarbeiten die damit verbundenen personenbezogenen Daten auf Grundlage deiner Einwilligung nach Art. 6 Abs. 1 lit. a DSGVO.</li>
+</ul>
+<p>Du erteilst deine Einwilligung über unser Cookie-Banner und kannst sie jederzeit mit Wirkung für die Zukunft ändern oder widerrufen (siehe Abschnitt 8). Der Widerruf der Einwilligung berührt nicht die Rechtmäßigkeit der bis zum Widerruf erfolgten Verarbeitung.</p>`,
+        },
+      },
+      {
+        en: {
+          head: '4. Categories of Cookies We Use',
+          body: `<p><strong>4.1 Strictly necessary cookies</strong><br>These cookies are required for the website to function and cannot be switched off in our systems. They are typically set in response to actions you take, such as setting your privacy preferences, recording your cookie consent choices, remembering your selected language, or ensuring basic security and load balancing. No consent is required for these.</p>
+<p><strong>4.2 Preference cookies</strong><br>These cookies allow the website to remember choices you make to give you enhanced, more personal features. Where these are not strictly necessary, we use them only with your consent.</p>
+<p><strong>4.3 Analytics cookies</strong><br>These cookies help us understand how visitors interact with the website by collecting and reporting information, for example which pages are visited and how the website performs. We use these only with your consent. See Section 5 for the specific tools.</p>
+<p><strong>4.4 Advertising and marketing cookies</strong><br>These cookies and pixels may be set through our site by advertising partners to measure the performance of our marketing campaigns, attribute installs and conversions, and build a profile of your interests. We use these only with your consent. See Section 5 for the specific tools.</p>`,
+        },
+        de: {
+          head: '4. Kategorien von Cookies, die wir verwenden',
+          body: `<p><strong>4.1 Unbedingt erforderliche Cookies</strong><br>Diese Cookies sind für den Betrieb der Website erforderlich und können in unseren Systemen nicht abgeschaltet werden. Sie werden in der Regel als Reaktion auf von dir vorgenommene Aktionen gesetzt, etwa das Festlegen deiner Datenschutzpräferenzen, das Speichern deiner Cookie-Einwilligungsentscheidungen, das Merken deiner gewählten Sprache oder die Gewährleistung grundlegender Sicherheit und Lastverteilung. Hierfür ist keine Einwilligung erforderlich.</p>
+<p><strong>4.2 Präferenz-Cookies</strong><br>Diese Cookies ermöglichen es der Website, von dir getroffene Entscheidungen zu speichern, um dir verbesserte, persönlichere Funktionen zu bieten. Soweit diese nicht unbedingt erforderlich sind, setzen wir sie nur mit deiner Einwilligung ein.</p>
+<p><strong>4.3 Analyse-Cookies</strong><br>Diese Cookies helfen uns zu verstehen, wie Besucher mit der Website interagieren, indem Informationen erhoben und gemeldet werden, zum Beispiel welche Seiten aufgerufen werden und wie die Website funktioniert. Wir setzen diese nur mit deiner Einwilligung ein. Die konkreten Tools findest du in Abschnitt 5.</p>
+<p><strong>4.4 Werbe- und Marketing-Cookies</strong><br>Diese Cookies und Pixel können über unsere Website von Werbepartnern gesetzt werden, um die Leistung unserer Marketingkampagnen zu messen, Installationen und Conversions zuzuordnen und ein Profil deiner Interessen zu erstellen. Wir setzen diese nur mit deiner Einwilligung ein. Die konkreten Tools findest du in Abschnitt 5.</p>`,
+        },
+      },
+      {
+        en: {
+          head: '5. Third-Party Cookies and Tools (Consent-Based)',
+          body: `<p>Subject to your consent, we may use the following third-party tools, which may set cookies or use similar technologies. These tools are only loaded after you consent, and you can withdraw your consent at any time (see Section 8). Each provider acts as a controller or joint controller for its own purposes and processes data under its own privacy policy. Some of these providers are located in or transfer data to the United States (see Section 6).</p>
+<p><strong>5.1 Analytics</strong></p>
+<ul>
+<li><strong>Google Analytics (Google)</strong>. Purpose: measuring website traffic and usage, understanding which pages and features are used. Provider: Google.</li>
+<li><strong>PostHog</strong>. Purpose: product and website analytics (funnels, retention, feature usage). Provider: PostHog (may be hosted in the EU or the US depending on our configuration).</li>
+</ul>
+<p><strong>5.2 Advertising and conversion measurement</strong></p>
+<ul>
+<li><strong>Meta Pixel (Meta Platforms)</strong>. Purpose: measuring and optimising advertising on Facebook and Instagram and reaching relevant audiences.</li>
+<li><strong>TikTok Pixel (TikTok)</strong>. Purpose: advertising measurement and attribution on TikTok.</li>
+<li><strong>Pinterest Tag (Pinterest)</strong>. Purpose: advertising measurement and audience building on Pinterest.</li>
+<li><strong>Google Ads (Google)</strong>. Purpose: advertising, conversion tracking, and campaign measurement.</li>
+</ul>
+<p>Some of these tools are planned and may not be active at all times. We will keep this policy up to date and only set a given cookie or load a given tool once it is live and you have consented. The categories shown in our cookie banner always reflect what is actually in use.</p>`,
+        },
+        de: {
+          head: '5. Cookies und Tools von Drittanbietern (einwilligungsbasiert)',
+          body: `<p>Vorbehaltlich deiner Einwilligung können wir die folgenden Tools von Drittanbietern einsetzen, die Cookies setzen oder ähnliche Technologien verwenden können. Diese Tools werden erst nach deiner Einwilligung geladen, und du kannst deine Einwilligung jederzeit widerrufen (siehe Abschnitt 8). Jeder Anbieter handelt zu eigenen Zwecken als Verantwortlicher oder gemeinsam Verantwortlicher und verarbeitet Daten nach seiner eigenen Datenschutzerklärung. Einige dieser Anbieter befinden sich in den Vereinigten Staaten oder übermitteln Daten dorthin (siehe Abschnitt 6).</p>
+<p><strong>5.1 Analyse</strong></p>
+<ul>
+<li><strong>Google Analytics (Google)</strong>. Zweck: Messung von Website-Zugriffen und Nutzung, Verständnis dafür, welche Seiten und Funktionen genutzt werden. Anbieter: Google.</li>
+<li><strong>PostHog</strong>. Zweck: Produkt- und Website-Analyse (Funnels, Bindung, Funktionsnutzung). Anbieter: PostHog (je nach unserer Konfiguration ggf. in der EU oder den USA gehostet).</li>
+</ul>
+<p><strong>5.2 Werbung und Conversion-Messung</strong></p>
+<ul>
+<li><strong>Meta Pixel (Meta Platforms)</strong>. Zweck: Messung und Optimierung von Werbung auf Facebook und Instagram sowie Erreichen relevanter Zielgruppen.</li>
+<li><strong>TikTok Pixel (TikTok)</strong>. Zweck: Werbemessung und Attribution auf TikTok.</li>
+<li><strong>Pinterest Tag (Pinterest)</strong>. Zweck: Werbemessung und Zielgruppenaufbau auf Pinterest.</li>
+<li><strong>Google Ads (Google)</strong>. Zweck: Werbung, Conversion-Tracking und Kampagnenmessung.</li>
+</ul>
+<p>Einige dieser Tools sind geplant und möglicherweise nicht immer aktiv. Wir halten diese Richtlinie aktuell und setzen ein bestimmtes Cookie oder laden ein bestimmtes Tool erst, sobald es aktiv ist und du eingewilligt hast. Die in unserem Cookie-Banner angezeigten Kategorien spiegeln stets das tatsächlich Eingesetzte wider.</p>`,
+        },
+      },
+      {
+        en: {
+          head: '6. International Data Transfers',
+          body: `<p>Some of the third-party providers listed in Section 5 are located in, or process data in, the United States or other countries outside the European Economic Area (EEA), which may not provide a level of data protection equivalent to that of the EU.</p>
+<p>Where data is transferred to a third country, we and the respective providers rely on appropriate safeguards in accordance with Chapter V of the GDPR, in particular the European Commission's Standard Contractual Clauses (Art. 46(2)(c) GDPR) and/or certification under the EU-U.S. Data Privacy Framework (Art. 45 GDPR), where applicable. Where required, such transfers are additionally based on your consent (Art. 49(1)(a) GDPR). Further details are available in our <a href="../privacy/">Privacy Policy</a> and from each provider.</p>`,
+        },
+        de: {
+          head: '6. Internationale Datenübermittlungen',
+          body: `<p>Einige der in Abschnitt 5 aufgeführten Drittanbieter befinden sich in den Vereinigten Staaten oder anderen Ländern außerhalb des Europäischen Wirtschaftsraums (EWR) oder verarbeiten dort Daten, die möglicherweise kein der EU gleichwertiges Datenschutzniveau bieten.</p>
+<p>Soweit Daten in ein Drittland übermittelt werden, stützen wir und die jeweiligen Anbieter uns auf geeignete Garantien gemäß Kapitel V der DSGVO, insbesondere die Standardvertragsklauseln der Europäischen Kommission (Art. 46 Abs. 2 lit. c DSGVO) und/oder eine Zertifizierung nach dem EU-U.S. Data Privacy Framework (Art. 45 DSGVO), soweit anwendbar. Soweit erforderlich, stützen sich solche Übermittlungen zusätzlich auf deine Einwilligung (Art. 49 Abs. 1 lit. a DSGVO). Weitere Einzelheiten findest du in unserer <a href="../privacy/">Datenschutzerklärung</a> und beim jeweiligen Anbieter.</p>`,
+        },
+      },
+      {
+        en: {
+          head: '7. The Neomind Mobile App',
+          body: `<p>As a mobile application, the Neomind app does not use browser cookies in the traditional sense. To function, however, it stores certain information on your device, such as authentication tokens and session information (kept in secure device storage so you stay signed in), local app settings, and cached content. This strictly necessary storage does not require consent.</p>
+<p>Any analytics or advertising technologies in the app are not strictly necessary and are used only with your consent, which you can manage or withdraw at any time via the in-app privacy/consent settings. For full details of how the app processes data, please see our <a href="../privacy/">Privacy Policy</a>.</p>`,
+        },
+        de: {
+          head: '7. Die mobile Neomind-App',
+          body: `<p>Als mobile Anwendung verwendet die Neomind-App keine Browser-Cookies im herkömmlichen Sinne. Um zu funktionieren, speichert sie jedoch bestimmte Informationen auf deinem Gerät, etwa Authentifizierungs-Tokens und Sitzungsinformationen (im sicheren Gerätespeicher abgelegt, damit du angemeldet bleibst), lokale App-Einstellungen und zwischengespeicherte Inhalte. Diese unbedingt erforderliche Speicherung bedarf keiner Einwilligung.</p>
+<p>Etwaige Analyse- oder Werbetechnologien in der App sind nicht unbedingt erforderlich und werden nur mit deiner Einwilligung eingesetzt, die du jederzeit über die Datenschutz-/Einwilligungseinstellungen in der App verwalten oder widerrufen kannst. Vollständige Einzelheiten dazu, wie die App Daten verarbeitet, findest du in unserer <a href="../privacy/">Datenschutzerklärung</a>.</p>`,
+        },
+      },
+      {
+        en: {
+          head: '8. How to Manage and Withdraw Your Consent',
+          body: `<p>When you first visit our website, our cookie banner lets you accept or reject non-essential cookies. You can change your choices at any time, with effect for the future, by reopening the cookie settings on our website.</p>
+<p>You can also manage cookies through your browser, which usually allows you to:</p>
+<ul>
+<li>see what cookies are stored and delete them individually or all at once;</li>
+<li>block third-party cookies;</li>
+<li>block cookies from particular sites;</li>
+<li>block all cookies; and</li>
+<li>delete all cookies when you close your browser.</li>
+</ul>
+<p>Please note that blocking or deleting strictly necessary cookies may affect the functionality of the website. Many browsers also offer a "Do Not Track" signal; because there is no uniform standard for how such signals must be handled, our website responds to your choices made via the cookie banner. You may also be able to opt out of certain advertising cookies via industry tools such as <a href="https://www.youronlinechoices.eu" rel="noopener noreferrer" target="_blank">Your Online Choices</a>.</p>`,
+        },
+        de: {
+          head: '8. Verwaltung und Widerruf deiner Einwilligung',
+          body: `<p>Wenn du unsere Website zum ersten Mal besuchst, kannst du über unser Cookie-Banner nicht erforderliche Cookies annehmen oder ablehnen. Du kannst deine Entscheidungen jederzeit mit Wirkung für die Zukunft ändern, indem du die Cookie-Einstellungen auf unserer Website erneut öffnest.</p>
+<p>Du kannst Cookies auch über deinen Browser verwalten, der dir in der Regel ermöglicht:</p>
+<ul>
+<li>zu sehen, welche Cookies gespeichert sind, und sie einzeln oder insgesamt zu löschen;</li>
+<li>Drittanbieter-Cookies zu blockieren;</li>
+<li>Cookies bestimmter Websites zu blockieren;</li>
+<li>alle Cookies zu blockieren; und</li>
+<li>beim Schließen des Browsers alle Cookies zu löschen.</li>
+</ul>
+<p>Bitte beachte, dass das Blockieren oder Löschen unbedingt erforderlicher Cookies die Funktionsfähigkeit der Website beeinträchtigen kann. Viele Browser bieten zudem ein „Do Not Track"-Signal; da es keinen einheitlichen Standard für die Behandlung solcher Signale gibt, richtet sich unsere Website nach deinen über das Cookie-Banner getroffenen Entscheidungen. Über Branchen-Tools wie <a href="https://www.youronlinechoices.eu" rel="noopener noreferrer" target="_blank">Your Online Choices</a> kannst du dich gegebenenfalls auch von bestimmten Werbe-Cookies abmelden.</p>`,
+        },
+      },
+      {
+        en: {
+          head: '9. Your Rights',
+          body: `<p>Where we process personal data through cookies, you have the rights set out in the GDPR, including the right of access, rectification, erasure, restriction, data portability, and the right to object, as well as the right to lodge a complaint with a supervisory authority. These rights are described in full in our <a href="../privacy/">Privacy Policy</a>. To exercise any of them, contact us at neomind.help@gmail.com.</p>`,
+        },
+        de: {
+          head: '9. Deine Rechte',
+          body: `<p>Soweit wir personenbezogene Daten über Cookies verarbeiten, stehen dir die in der DSGVO vorgesehenen Rechte zu, einschließlich des Rechts auf Auskunft, Berichtigung, Löschung, Einschränkung, Datenübertragbarkeit und des Widerspruchsrechts sowie des Rechts auf Beschwerde bei einer Aufsichtsbehörde. Diese Rechte sind ausführlich in unserer <a href="../privacy/">Datenschutzerklärung</a> beschrieben. Zur Ausübung kontaktiere uns unter neomind.help@gmail.com.</p>`,
+        },
+      },
+      {
+        en: {
+          head: '10. Changes to this Cookie Policy',
+          body: `<p>We may update this Cookie Policy from time to time to reflect changes in the technologies we use or in legal requirements. The current version is always available on this page, with the "Last updated" date shown at the top. Where changes require it, we will ask for your consent again.</p>`,
+        },
+        de: {
+          head: '10. Änderungen dieser Cookie-Richtlinie',
+          body: `<p>Wir können diese Cookie-Richtlinie von Zeit zu Zeit aktualisieren, um Änderungen der eingesetzten Technologien oder der rechtlichen Anforderungen abzubilden. Die jeweils aktuelle Fassung ist stets auf dieser Seite verfügbar; das Datum „Zuletzt aktualisiert" wird oben angezeigt. Soweit Änderungen dies erfordern, holen wir deine Einwilligung erneut ein.</p>`,
+        },
+      },
+      {
+        en: {
+          head: '11. Contact',
+          body: `<p>If you have any questions about this Cookie Policy or our use of cookies, please contact us at: <a href="mailto:neomind.help@gmail.com">neomind.help@gmail.com</a>.</p>`,
+        },
+        de: {
+          head: '11. Kontakt',
+          body: `<p>Wenn du Fragen zu dieser Cookie-Richtlinie oder zu unserem Einsatz von Cookies hast, kontaktiere uns bitte unter: <a href="mailto:neomind.help@gmail.com">neomind.help@gmail.com</a>.</p>`,
+        },
+      },
+    ],
+  },
+
   terms: {
     meta: {
       updated: {
