@@ -47,15 +47,13 @@
     </p>
   </div>
 
+  <!-- Store URLs come from the shared config (single source of truth). -->
+  <script src="../assets/js/config.js"></script>
   <script>
     (function () {
-      // ============================================================
-      // TODO before shipping: replace these placeholder store URLs.
-      // See docs/pre-launch-todos.md
-      // ============================================================
-      var APP_STORE_URL = "https://apps.apple.com/app/idXXXXXXXXXX";          // PLACEHOLDER — iOS App Store
-      var PLAY_STORE_URL = "https://play.google.com/store/apps/details?id=com.neomind.PLACEHOLDER"; // PLACEHOLDER — Google Play
-      var WEB_FALLBACK_URL = "/";                                              // Desktop / unknown devices → homepage
+      var APP_STORE_URL = window.NEOMIND_LINKS.appStore;  // iOS App Store
+      var PLAY_STORE_URL = window.NEOMIND_LINKS.playStore; // Google Play
+      var WEB_FALLBACK_URL = "/";                          // Desktop / unknown devices → homepage
 
       // Carry through any query params (e.g. ?utm_source=tiktok) so
       // they survive the redirect for attribution.

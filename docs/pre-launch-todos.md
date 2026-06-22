@@ -8,13 +8,16 @@ The `/download` page (`download/index.html`) auto-detects the visitor's device
 and redirects to the app store listing. It currently uses **placeholder** store
 URLs that must be replaced with the real ones.
 
+Both store URLs now live in **one place** — `assets/js/config.js`. Editing
+them there updates every badge across the site *and* the `/download` redirect.
+
 - [ ] **Replace the iOS App Store URL.**
-  In `download/index.html`, set `APP_STORE_URL` to the real listing.
+  In `assets/js/config.js`, set `appStore` to the real listing.
   Currently: `https://apps.apple.com/app/idXXXXXXXXXX`
   Format: `https://apps.apple.com/app/id<APP_ID>` (the numeric App Store ID).
 
 - [ ] **Replace the Google Play URL.**
-  In `download/index.html`, set `PLAY_STORE_URL` to the real listing.
+  In `assets/js/config.js`, set `playStore` to the real listing.
   Currently: `https://play.google.com/store/apps/details?id=com.neomind.PLACEHOLDER`
   Format: `https://play.google.com/store/apps/details?id=<ANDROID_PACKAGE_NAME>`
 

@@ -198,6 +198,21 @@ function renderFaq(lang) {
   });
 })();
 
+// Store badges — fill every App Store / Google Play link from the single
+// source of truth in config.js. Badges are matched by their aria-label, so
+// changing a URL only ever needs one edit (in assets/js/config.js).
+(function () {
+  const links = window.NEOMIND_LINKS;
+  if (!links) return;
+
+  document.querySelectorAll('a[aria-label="Download on the App Store"]').forEach(function (a) {
+    a.href = links.appStore;
+  });
+  document.querySelectorAll('a[aria-label="Get it on Google Play"]').forEach(function (a) {
+    a.href = links.playStore;
+  });
+})();
+
 // QR widget — dismiss button hides it for the rest of the session.
 (function () {
   const widget = document.querySelector('.qr-widget');
