@@ -62,6 +62,20 @@ The footer social icons currently point to `href="#"` placeholders
 - [ ] **Set the Instagram URL** on the footer Instagram link.
 - [ ] **Set the YouTube URL** on the footer YouTube link.
 
+## 🖼️ Image optimization (page load is slow)
+
+The site currently loads slowly, mostly due to large, unoptimized image assets.
+Reduce the total image payload before launch.
+
+- [ ] **Convert images to WebP** (keep fallbacks where needed for older browsers).
+- [ ] **Compress** all images (strip metadata, tune quality).
+- [ ] **Resize** images to the actual dimensions they render at. Don't ship
+  full-resolution source files.
+- [ ] **Serve responsive sizes** with `srcset`/`sizes` so mobile gets smaller
+  files than desktop.
+- [ ] **Lazy-load** below-the-fold images (`loading="lazy"`).
+- [ ] **Re-measure** load time afterward to confirm the improvement.
+
 ## Notes
 
 - The redirect page is marked `noindex` so search engines don't list it.
