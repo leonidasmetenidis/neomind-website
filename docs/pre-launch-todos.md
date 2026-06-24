@@ -76,6 +76,13 @@ Reduce the total image payload before launch.
 - [ ] **Lazy-load** below-the-fold images (`loading="lazy"`).
 - [ ] **Re-measure** load time afterward to confirm the improvement.
 
+## 🔒 Enforce HTTPS
+
+- [ ] **Enable "Enforce HTTPS"** in the GitHub Pages settings
+  (Settings → Pages). GitHub doesn't allow it yet because the TLS certificate
+  for the custom domain (`getneomind.com`) is still being provisioned. Re-check
+  once the cert is issued and turn it on so all traffic is forced to HTTPS.
+
 ## Notes
 
 - The redirect page is marked `noindex` so search engines don't list it.
