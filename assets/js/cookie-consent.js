@@ -88,13 +88,23 @@
     // Force reflow so the entrance transition runs from the hidden state.
     void banner.offsetWidth;
     banner.classList.add('is-open');
-    // The QR widget shares the bottom-left corner; hide it while we're here.
+    // Hide the QR widget and lock background scroll while the modal is up.
     document.body.classList.add('cc-banner-open');
+    // Block Escape: the visitor must make a choice, they cannot dismiss it.
+    document.addEventListener('keydown', blockEscape, true);
+  }
+
+  function blockEscape(e) {
+    if (e.key === 'Escape' || e.key === 'Esc') {
+      e.preventDefault();
+      e.stopPropagation();
+    }
   }
 
   function closeBanner() {
     banner.classList.remove('is-open');
     document.body.classList.remove('cc-banner-open');
+    document.removeEventListener('keydown', blockEscape, true);
     // Hide once, whichever comes first: the close transition ending, or a
     // fallback timer for when it never fires (e.g. reduced motion).
     var fallback;

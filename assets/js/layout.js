@@ -139,7 +139,7 @@
   // accept / reject / per-category logic. Non-essential cookies stay off until
   // the visitor consents. Policy links use BASE so they resolve from any page.
   var cookieBanner =
-    '<div class="cookie-consent" role="dialog" aria-modal="false" aria-labelledby="cc-title" hidden>' +
+    '<div class="cookie-consent" role="dialog" aria-modal="true" aria-labelledby="cc-title" hidden>' +
       '<div class="cookie-consent__dialog">' +
 
         '<div class="cookie-consent__view" data-cc-view="main">' +
