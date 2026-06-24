@@ -142,6 +142,14 @@
     '<div class="cookie-consent" role="dialog" aria-modal="true" aria-labelledby="cc-title" hidden>' +
       '<div class="cookie-consent__dialog">' +
 
+        // Language toggle inside the modal: the consent overlay covers the
+        // header switcher, so this lets a visitor read the notice in their
+        // language before deciding. Wired up in assets/js/main.js.
+        '<div class="cookie-consent__lang" role="group" aria-label="Language">' +
+          '<button class="cookie-consent__lang-btn" type="button" data-cc-lang="en">EN</button>' +
+          '<button class="cookie-consent__lang-btn" type="button" data-cc-lang="de">DE</button>' +
+        '</div>' +
+
         '<div class="cookie-consent__view" data-cc-view="main">' +
           '<h2 class="cookie-consent__title" id="cc-title" data-i18n="cc_title">We value your privacy</h2>' +
           '<p class="cookie-consent__text" data-i18n="cc_text">We use cookies to keep this site running and, only with your consent, to analyse usage and measure our marketing. You can accept all, reject all, or choose which cookies to allow.</p>' +

@@ -199,6 +199,12 @@ function renderFaq(lang) {
         label.textContent = i.dataset.label;
       }
     });
+    // Keep the in-modal cookie-consent language toggle in sync, if present.
+    document.querySelectorAll('[data-cc-lang]').forEach(function (b) {
+      const active = b.dataset.ccLang === lang;
+      b.classList.toggle('is-active', active);
+      b.setAttribute('aria-pressed', active ? 'true' : 'false');
+    });
     applyLanguage(lang);
     try { localStorage.setItem('lang', lang); } catch (e) {}
 
@@ -222,6 +228,14 @@ function renderFaq(lang) {
     });
   });
 
+  // The cookie-consent modal carries its own EN/DE toggle (the modal covers
+  // the header switcher). Route its clicks through the same selectLang.
+  document.addEventListener('click', function (e) {
+    const langBtn = e.target.closest('[data-cc-lang]');
+    if (!langBtn) return;
+    selectLang(langBtn.dataset.ccLang, true);
+  });
+
   // Close when clicking outside
   document.addEventListener('click', function (e) {
     if (!switcher.contains(e.target)) close();
@@ -232,15 +246,24 @@ function renderFaq(lang) {
     if (e.key === 'Escape') close();
   });
 
-  // Pick the initial language: ?lang= in the URL wins, then the saved choice.
+  // Pick the initial language: ?lang= in the URL wins, then the saved choice,
+  // then the browser's preferred language (so a German visitor sees the German
+  // site, and the cookie consent popup, on first load without having to reach
+  // the language switcher, which the consent modal covers). English is the
+  // final fallback.
   const supported = Array.from(items).map(function (i) { return i.dataset.lang; });
   const urlLang = new URL(window.location.href).searchParams.get('lang');
   let saved;
   try { saved = localStorage.getItem('lang'); } catch (e) {}
 
+  const browserLangs = navigator.languages || [navigator.language || ''];
+  const browserLang = browserLangs
+    .map(function (l) { return String(l).slice(0, 2).toLowerCase(); })
+    .filter(function (l) { return supported.indexOf(l) !== -1; })[0];
+
   const initial = supported.indexOf(urlLang) !== -1 ? urlLang
     : supported.indexOf(saved) !== -1 ? saved
-    : 'en';
+    : browserLang || 'en';
   // Sync the URL on load so it always reflects the active language.
   selectLang(initial, true);
 })();
