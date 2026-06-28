@@ -78,10 +78,12 @@ Reduce the total image payload before launch.
 
 ## 🔒 Enforce HTTPS
 
-- [ ] **Enable "Enforce HTTPS"** in the GitHub Pages settings
-  (Settings → Pages). GitHub doesn't allow it yet because the TLS certificate
-  for the custom domain (`getneomind.com`) is still being provisioned. Re-check
-  once the cert is issued and turn it on so all traffic is forced to HTTPS.
+- [x] **Enable "Enforce HTTPS"** in the GitHub Pages settings
+  (Settings → Pages). Done. The TLS certificate for the custom domain
+  (`getneomind.com`) was provisioned and Enforce HTTPS is enabled, so all
+  traffic is forced to HTTPS. Fix was removing a broken single AAAA record at
+  checkdomain (GitHub needs all four IPv6 addresses or none), and setting
+  `www` to a CNAME pointing to `leonidasmetenidis.github.io`.
 
 ## Notes
 

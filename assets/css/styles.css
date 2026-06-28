@@ -137,8 +137,12 @@ body {
 }
 
 .lang-switch__flag {
-  font-size: 20px;
-  line-height: 1;
+  width: 18px;
+  height: 18px;
+  border-radius: 3px;
+  object-fit: cover;
+  display: block;
+  flex-shrink: 0;
 }
 
 .lang-switch__chevron {
@@ -204,8 +208,12 @@ body {
 }
 
 .lang-menu__flag {
-  font-size: 20px;
-  line-height: 1;
+  width: 18px;
+  height: 18px;
+  border-radius: 3px;
+  object-fit: cover;
+  display: block;
+  flex-shrink: 0;
 }
 
 .lang-menu__name {
@@ -773,7 +781,8 @@ body {
   }
 
   .lang-switch__flag {
-    font-size: 16px;
+    width: 18px;
+    height: 18px;
   }
 
   /* Hero */

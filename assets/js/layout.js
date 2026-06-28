@@ -20,18 +20,18 @@
       '<div class="header__actions">' +
         '<div class="lang-switch">' +
           '<button class="lang-switch__toggle" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Select language">' +
-            '<span class="lang-switch__flag">🇺🇸</span>' +
+            '<img class="lang-switch__flag" src="' + BASE + 'assets/images/us_flag.webp" alt="" width="20" height="20">' +
             '<span class="lang-switch__label">EN</span>' +
             '<svg class="lang-switch__chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>' +
           '</button>' +
           '<div class="lang-menu" role="menu">' +
-            '<button class="lang-menu__item" type="button" role="menuitem" data-lang="de" data-flag="🇩🇪" data-label="DE">' +
-              '<span class="lang-menu__flag">🇩🇪</span>' +
+            '<button class="lang-menu__item" type="button" role="menuitem" data-lang="de" data-flag="' + BASE + 'assets/images/de_flag.webp" data-label="DE">' +
+              '<img class="lang-menu__flag" src="' + BASE + 'assets/images/de_flag.webp" alt="" width="20" height="20">' +
               '<span class="lang-menu__name">Deutsch</span>' +
               '<svg class="lang-menu__check" width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>' +
             '</button>' +
-            '<button class="lang-menu__item is-active" type="button" role="menuitem" data-lang="en" data-flag="🇺🇸" data-label="EN">' +
-              '<span class="lang-menu__flag">🇺🇸</span>' +
+            '<button class="lang-menu__item is-active" type="button" role="menuitem" data-lang="en" data-flag="' + BASE + 'assets/images/us_flag.webp" data-label="EN">' +
+              '<img class="lang-menu__flag" src="' + BASE + 'assets/images/us_flag.webp" alt="" width="20" height="20">' +
               '<span class="lang-menu__name">English</span>' +
               '<svg class="lang-menu__check" width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>' +
             '</button>' +

@@ -195,7 +195,7 @@ function renderFaq(lang) {
       const active = i.dataset.lang === lang;
       i.classList.toggle('is-active', active);
       if (active) {
-        flag.textContent = i.dataset.flag;
+        flag.src = i.dataset.flag;
         label.textContent = i.dataset.label;
       }
     });
