@@ -20,8 +20,6 @@ Leave the box unchecked until the real content lands.
 ## 📄 Content pages
 - [ ] **About us** — `about/index.html` → footer link `footer_about` (scaffold only)
 - [x] **Contact us** — `contact/index.html` → footer link `footer_contact` (intro + mailto email, EN + DE)
-- [ ] **Blog** — `blog/index.html` → footer link `footer_blog` (scaffold only)
-      (decide: single page, or index + individual posts?)
 
 ## How to add a new page
 The shared chrome (header, footer, download modal, QR widget) lives in
