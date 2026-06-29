@@ -89,6 +89,50 @@ Reduce the total image payload before launch.
   checkdomain (GitHub needs all four IPv6 addresses or none), and setting
   `www` to a CNAME pointing to `leonidasmetenidis.github.io`.
 
+## 🧑 Founder photo (About page)
+
+The About page (`about/index.html`) currently shows a CSS placeholder (a wide
+purple banner) instead of a real founder photo.
+
+- [ ] **Add a real founder photo.** Drop the image in `assets/images/` (WebP,
+  wide/landscape, ideally 16:9), then replace the placeholder `<div
+  class="about__photo about__photo--placeholder">` with `<img
+  class="about__photo" src="../assets/images/founder.webp" alt="Leonidas,
+  founder of Neomind">`. It spans the full article width; the rounded corners
+  and crop apply automatically.
+
+## ✍️ Copy QA (EN + DE)
+
+Proofread every page and section in **both languages** for typos, grammar,
+awkward phrasing, untranslated strings, and copy that overflows or breaks the
+layout. Toggle the language switcher and check each item in EN *and* DE.
+
+Each item has two boxes: the first for **EN**, the second for **DE**.
+
+### Home (`index.html`)
+- [ ] EN [ ] DE — **Hero** — eyebrow, headline, subheadline, CTA button.
+- [ ] EN [ ] DE — **Problem** — eyebrow, headline, body text.
+- [ ] EN [ ] DE — **Features** — eyebrow, headline, all 7 feature cards (title + text).
+- [ ] EN [ ] DE — **FAQ** — headline and every question/answer.
+- [ ] EN [ ] DE — **CTA** — headline, subheadline, button.
+- [ ] EN [ ] DE — **QR widget** — eyebrow and scan instructions.
+- [ ] EN [ ] DE — **Download modal** — headline, scan text, store text.
+
+### Content pages
+- [ ] EN [ ] DE — **About** (`about/index.html`) — headline, photo caption, full story, sign-off, contact line.
+- [ ] EN [ ] DE — **Contact** (`contact/index.html`) — headline, intro, email line.
+
+### Legal pages
+- [ ] EN [ ] DE — **Terms of Service** (`terms/index.html`) — headline + all sections.
+- [ ] EN [ ] DE — **Privacy Policy** (`privacy/index.html`) — headline + all sections.
+- [ ] EN [ ] DE — **Cookie Policy** (`cookies/index.html`) — headline + all sections.
+- [ ] EN [ ] DE — **Legal Notice / Impressum** (`legal-notice/index.html`) — headline + all blocks.
+
+### Shared chrome (every page)
+- [ ] EN [ ] DE — **Header / nav** — language switcher and any nav labels.
+- [ ] EN [ ] DE — **Footer** — column headings and every link label (Pages, Legal, social).
+- [ ] EN [ ] DE — **Cookie consent banner** — message, buttons, category labels, links.
+
 ## Notes
 
 - The redirect page is marked `noindex` so search engines don't list it.
