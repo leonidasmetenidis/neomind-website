@@ -493,6 +493,13 @@ body {
   border-bottom-right-radius: 24px;
 }
 
+/* Center a lone card left over on the last row of the 2-column grid. */
+.feature-card:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+  width: calc((100% - 40px) / 2);
+  margin-inline: auto;
+}
+
 /* ==========================================================================
    FAQ
    ========================================================================== */
@@ -872,6 +879,11 @@ body {
     grid-template-columns: 1fr;
     gap: 16px;
     margin-top: 36px;
+  }
+
+  .feature-card:last-child:nth-child(odd) {
+    width: 100%;
+    margin-inline: 0;
   }
 
   .feature-card__title {
