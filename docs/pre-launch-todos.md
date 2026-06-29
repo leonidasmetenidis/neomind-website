@@ -67,13 +67,17 @@ The footer social icons currently point to `href="#"` placeholders
 The site currently loads slowly, mostly due to large, unoptimized image assets.
 Reduce the total image payload before launch.
 
-- [ ] **Convert images to WebP** (keep fallbacks where needed for older browsers).
-- [ ] **Compress** all images (strip metadata, tune quality).
+- [x] **Convert images to WebP.** All content images (hero, problem, feature
+  cards, clouds CTA) converted from PNG/JPG to WebP. PNG favicon kept as-is.
+- [x] **Compress** all images. Handled by the WebP conversion. Payloads are now
+  small (hero 140K, feature/problem/clouds images 16–96K each).
 - [ ] **Resize** images to the actual dimensions they render at. Don't ship
   full-resolution source files.
 - [ ] **Serve responsive sizes** with `srcset`/`sizes` so mobile gets smaller
-  files than desktop.
-- [ ] **Lazy-load** below-the-fold images (`loading="lazy"`).
+  files than desktop. Only the `problem` image currently uses a `<picture>`
+  with a mobile source; the rest serve one size to all viewports.
+- [x] **Lazy-load** below-the-fold images (`loading="lazy"`). Applied to all
+  seven feature-card images.
 - [ ] **Re-measure** load time afterward to confirm the improvement.
 
 ## 🔒 Enforce HTTPS
