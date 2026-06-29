@@ -107,7 +107,7 @@ function applyLanguage(lang) {
     if (dict[key] != null) el.innerHTML = dict[key];
   });
 
-  // Swap language-specific images (e.g. assets/images/<lang>/hero.png).
+  // Swap language-specific images (e.g. assets/images/<lang>/hero.webp).
   document.querySelectorAll('[data-i18n-img]').forEach(function (el) {
     el.src = el.src.replace(/assets\/images\/[a-z]{2}\//, 'assets/images/' + lang + '/');
   });
