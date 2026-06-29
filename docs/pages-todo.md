@@ -18,7 +18,7 @@ Leave the box unchecked until the real content lands.
 - [x] **Legal Notice / Impressum** — `legal-notice/index.html` → footer link `footer_notice` (content written, EN + DE)
 
 ## 📄 Content pages
-- [ ] **About us** — `about/index.html` → footer link `footer_about` (scaffold only)
+- [x] **About us** — `about/index.html` → footer link `footer_about` (founder story "Why this app exists", EN + DE; photo placeholder pending real image)
 - [x] **Contact us** — `contact/index.html` → footer link `footer_contact` (intro + mailto email, EN + DE)
 
 ## How to add a new page

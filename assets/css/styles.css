@@ -1308,6 +1308,79 @@ body {
 }
 
 /* ==========================================================================
+   About page
+   ========================================================================== */
+.about__portrait {
+  margin: 32px 0 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.about__photo {
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.about__photo--placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(163, 91, 242, 0.45), rgba(163, 91, 242, 0.08));
+  color: #FFFFFF;
+  font-size: 52px;
+  font-weight: 600;
+  user-select: none;
+}
+
+.about__caption {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 14px;
+}
+
+.about__greeting {
+  margin-top: 24px;
+  color: #FFFFFF;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.about__question {
+  margin: 32px 0 0;
+  color: #FFFFFF;
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.about__question + .legal__text {
+  margin-top: 16px;
+}
+
+.about__signoff {
+  margin: 28px 0 0;
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.7;
+}
+
+.about__role {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.about__contact {
+  margin-top: 28px;
+}
+
+/* ==========================================================================
    Cookie consent banner
    ========================================================================== */
 /* "Cookie settings" reopen control in the footer, styled like a footer link. */
