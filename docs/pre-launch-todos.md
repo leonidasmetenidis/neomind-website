@@ -91,7 +91,7 @@ Reduce the total image payload before launch.
 
 ## 🧑 Founder photo (About page)
 
-The About page (`about/index.html`) currently shows a CSS placeholder (a wide
+The story page (`story/index.html`) currently shows a CSS placeholder (a wide
 purple banner) instead of a real founder photo.
 
 - [ ] **Add a real founder photo.** Drop the image in `assets/images/` (WebP,
@@ -119,7 +119,7 @@ Each item has two boxes: the first for **EN**, the second for **DE**.
 - [ ] EN [ ] DE — **Download modal** — headline, scan text, store text.
 
 ### Content pages
-- [ ] EN [ ] DE — **About** (`about/index.html`) — headline, photo caption, full story, sign-off, contact line.
+- [ ] EN [ ] DE — **Our story** (`story/index.html`) — headline, photo caption, full story, sign-off, contact line.
 - [ ] EN [ ] DE — **Contact** (`contact/index.html`) — headline, intro, email line.
 
 ### Legal pages

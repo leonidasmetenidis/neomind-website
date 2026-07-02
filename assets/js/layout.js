@@ -64,7 +64,7 @@
           '<h3 class="footer__heading" data-i18n="footer_pages">Pages</h3>' +
           '<a href="' + BASE + 'index.html" class="footer__link" data-i18n="footer_home">Home</a>' +
           '<a href="' + BASE + 'contact/index.html" class="footer__link" data-i18n="footer_contact">Contact us</a>' +
-          '<a href="' + BASE + 'about/index.html" class="footer__link" data-i18n="footer_about">About us</a>' +
+          '<a href="' + BASE + 'story/index.html" class="footer__link" data-i18n="footer_about">Our story</a>' +
         '</nav>' +
         '<nav class="footer__col" aria-label="Legal">' +
           '<h3 class="footer__heading" data-i18n="footer_legal">Legal</h3>' +
