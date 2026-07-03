@@ -15,7 +15,7 @@ const translations = {
     problem_eyebrow: 'Der Ausgangspunkt',
     problem_headline: 'Wie redest du eigentlich mit dir selbst?',
     problem_text: 'Die wenigsten von uns achten darauf. Die innere Stimme läuft einfach mit, geprägt von alten Mustern und dem, was andere mal gesagt haben. Neomind gibt dir den Raum, genauer hinzuhören und deine Gedankenwelt ganz bewusst neu zu gestalten.',
-    features_eyebrow: 'Wie Neomind hilft',
+    features_eyebrow: 'Wie Neomind funktioniert',
     features_headline: 'Hier ist alles, was du brauchst, um deine innere Welt zu verändern.',
     feature_1_title: '10.000+ Affirmationen<br>sofort einsatzbereit',
     feature_1_text: 'Eine wachsende Bibliothek rund um mentale Gesundheit, persönliches Wachstum, Liebe, Gesundheit, Fülle und mehr. Einfach swipen und aufnehmen.',

@@ -1,65 +1,75 @@
 /* ==========================================================================
    Fonts
    ========================================================================== */
+/* Inter (body) self-hosted as a single variable font, latin subset. */
+@font-face {
+  font-family: 'Inter';
+  src: url('../fonts/woff2/Inter-var.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Switzer (headlines) self-hosted as WOFF2. */
 @font-face {
   font-family: 'Switzer';
-  src: url('../fonts/Switzer (OTF)/Switzer-Thin.otf') format('opentype');
+  src: url('../fonts/woff2/Switzer-Thin.woff2') format('woff2');
   font-weight: 100;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Switzer';
-  src: url('../fonts/Switzer (OTF)/Switzer-Extralight.otf') format('opentype');
+  src: url('../fonts/woff2/Switzer-Extralight.woff2') format('woff2');
   font-weight: 200;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Switzer';
-  src: url('../fonts/Switzer (OTF)/Switzer-Light.otf') format('opentype');
+  src: url('../fonts/woff2/Switzer-Light.woff2') format('woff2');
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Switzer';
-  src: url('../fonts/Switzer (OTF)/Switzer-Regular.otf') format('opentype');
+  src: url('../fonts/woff2/Switzer-Regular.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Switzer';
-  src: url('../fonts/Switzer (OTF)/Switzer-Medium.otf') format('opentype');
+  src: url('../fonts/woff2/Switzer-Medium.woff2') format('woff2');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Switzer';
-  src: url('../fonts/Switzer (OTF)/Switzer-Semibold.otf') format('opentype');
+  src: url('../fonts/woff2/Switzer-Semibold.woff2') format('woff2');
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Switzer';
-  src: url('../fonts/Switzer (OTF)/Switzer-Bold.otf') format('opentype');
+  src: url('../fonts/woff2/Switzer-Bold.woff2') format('woff2');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Switzer';
-  src: url('../fonts/Switzer (OTF)/Switzer-Extrabold.otf') format('opentype');
+  src: url('../fonts/woff2/Switzer-Extrabold.woff2') format('woff2');
   font-weight: 800;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Switzer';
-  src: url('../fonts/Switzer (OTF)/Switzer-Black.otf') format('opentype');
+  src: url('../fonts/woff2/Switzer-Black.woff2') format('woff2');
   font-weight: 900;
   font-style: normal;
   font-display: swap;
@@ -331,25 +341,16 @@ body {
   position: absolute;
   top: calc(50% + 200px);
   left: 50%;
-  width: 250px;
-  height: 250px;
+  width: 700px;
+  height: 700px;
   border-radius: 50%;
-  filter: blur(250px);
-}
-
-.hero__glow--1 {
-  background-color: #7207EA;
-  transform: translate(-180%, -50%);
+  opacity: 0.25;
+  filter: blur(90px);
 }
 
 .hero__glow--2 {
   background-color: #8D02F1;
   transform: translate(-50%, -50%);
-}
-
-.hero__glow--3 {
-  background-color: #C301EE;
-  transform: translate(80%, -50%);
 }
 
 /* Smaller accent glow behind the Features and FAQ headlines */
@@ -358,12 +359,12 @@ body {
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 320px;
-  height: 320px;
+  width: 400px;
+  height: 400px;
   border-radius: 50%;
-  background-color: #2F6BFF;
-  filter: blur(180px);
-  opacity: 0.45;
+  background-color: #7207EA;
+  filter: blur(80px);
+  opacity: 0.2;
   z-index: -1;
   pointer-events: none;
 }
@@ -1404,9 +1405,10 @@ body {
   align-items: center;
   justify-content: center;
   padding: 24px;
-  background: rgba(8, 8, 12, 0.6);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
+  /* Plain dim rather than a full-viewport backdrop blur: the blur repainted the
+     whole screen on first load, which was costly on mobile Safari. The dialog
+     itself keeps its own blur below. */
+  background: rgba(8, 8, 12, 0.72);
   opacity: 0;
   transition: opacity 0.25s ease;
 }

@@ -5,18 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title data-i18n="title_home">Neomind · AI-Powered Mindset App</title>
   <link rel="icon" type="image/png" href="assets/icons/special/neomind_app_watermark_icon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="preload" href="assets/fonts/woff2/Inter-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/images/en/hero.webp" as="image" fetchpriority="high">
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
   <!-- Header, footer, download modal and QR widget are injected by
        assets/js/layout.js so they stay identical across every page. -->
   <div class="bg-glows" aria-hidden="true">
-    <span class="hero__glow hero__glow--1"></span>
     <span class="hero__glow hero__glow--2"></span>
-    <span class="hero__glow hero__glow--3"></span>
   </div>
 
   <section class="hero">
@@ -38,7 +35,7 @@
       </a>
     </div>
 
-    <img src="assets/images/en/hero.webp" alt="Neomind app" class="hero__image" data-i18n-img="hero">
+    <img src="assets/images/en/hero.webp" alt="Neomind app" class="hero__image" data-i18n-img="hero" fetchpriority="high">
   </section>
 
   <section class="problem">
@@ -48,12 +45,6 @@
         <img src="assets/images/problem.webp" alt="" class="problem__image">
       </picture>
       <div class="problem__content">
-        <span class="hero__eyebrow problem__eyebrow">
-          <svg class="hero__eyebrow-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path d="M6 21V4M6 4h11l-2 4 2 4H6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-          <span data-i18n="problem_eyebrow">The starting point</span>
-        </span>
         <h2 class="headline" data-i18n="problem_headline">When did you last question the way you talk to yourself?</h2>
         <p class="problem__text" data-i18n="problem_text">For most of us, the answer is rarely. The inner narrative just runs, shaped by old habits and other people. Neomind gives you space to hear it clearly and slowly rewrite it.</p>
       </div>
@@ -67,7 +58,7 @@
         <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/>
         <path d="M8 12l3 3 5-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
-      <span data-i18n="features_eyebrow">How Neomind helps</span>
+      <span data-i18n="features_eyebrow">How Neomind works</span>
     </span>
     <h2 class="headline features__headline" data-i18n="features_headline">Here's everything you need to shift your inner world.</h2>
 
