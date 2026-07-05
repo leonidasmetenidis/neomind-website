@@ -21,6 +21,15 @@ them there updates every badge across the site *and* the `/download` redirect.
   Currently: `https://play.google.com/store/apps/details?id=com.neomind.PLACEHOLDER`
   Format: `https://play.google.com/store/apps/details?id=<ANDROID_PACKAGE_NAME>`
 
+The QR code shown in the download modal and corner widget (`assets/js/layout.js`)
+is the **real, scannable code** encoding `https://getneomind.com/download`. It is
+final and never needs changing, filling in the store URLs above is all that's
+left. Standalone print versions (SVG + PNG) can be regenerated with segno if
+needed for flyers/packaging.
+
+- [ ] **Scan the on-screen QR with a real phone camera** and confirm it opens
+  `getneomind.com/download` (verifies the code decodes *and* that the host
+  serves `/download` without a `.html` extension, i.e. clean URLs work).
 - [ ] **Test the redirect on a real iPhone** (opens the App Store app/listing).
 - [ ] **Test the redirect on a real Android device** (opens the Play Store).
 - [ ] **Test from inside the TikTok and Instagram in-app browsers** — these
