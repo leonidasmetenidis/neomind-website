@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Reset password · Neomind</title>
+  <link rel="icon" type="image/png" href="../assets/icons/special/neomind_app_watermark_icon.png">
+  <link rel="preload" href="../assets/fonts/woff2/Inter-var.woff2" as="font" type="font/woff2" crossorigin>
+  <!-- Reuse the site's self-hosted fonts and base body styles. -->
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <style>
+    /* Standalone, distraction-free auth page. No site header/footer is injected here —
+       a password reset should keep the user focused on the single task. */
+    .reset {
+      min-height: 100dvh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      box-sizing: border-box;
+    }
+    .reset__card {
+      width: 100%;
+      max-width: 420px;
+      background: rgba(18, 18, 24, 0.9);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 20px;
+      padding: 36px 28px;
+      text-align: center;
+    }
+    .reset__logo {
+      height: 24px;
+      width: auto;
+      margin: 0 auto 24px;
+      display: block;
+      filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.45));
+    }
+    .reset__title {
+      font-family: 'Switzer', sans-serif;
+      font-weight: 500;
+      font-size: 26px;
+      color: #FFFFFF;
+      margin: 0 0 10px;
+    }
+    .reset__text {
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      line-height: 1.5;
+      color: rgba(255, 255, 255, 0.65);
+      margin: 0 0 24px;
+    }
+    .reset__field {
+      text-align: left;
+      margin-bottom: 16px;
+    }
+    .reset__input-wrap {
+      position: relative;
+    }
+    /* Show/hide password toggle button sitting inside the input on the right. */
+    .reset__toggle {
+      position: absolute;
+      top: 50%;
+      right: 8px;
+      transform: translateY(-50%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      padding: 0;
+      border: none;
+      background: transparent;
+      color: rgba(255, 255, 255, 0.45);
+      cursor: pointer;
+      transition: color 0.15s ease;
+    }
+    .reset__toggle:hover { color: rgba(255, 255, 255, 0.8); }
+    .reset__toggle svg { width: 20px; height: 20px; display: block; }
+    .reset__toggle .icon-off { display: none; }
+    .reset__toggle.is-visible .icon-on { display: none; }
+    .reset__toggle.is-visible .icon-off { display: block; }
+    .reset__label {
+      display: block;
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.7);
+      margin-bottom: 8px;
+    }
+    .reset__input {
+      width: 100%;
+      box-sizing: border-box;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 12px;
+      padding: 14px 48px 14px 16px;
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      color: #FFFFFF;
+      transition: border-color 0.15s ease, background 0.15s ease;
+    }
+    .reset__input:focus {
+      outline: none;
+      border-color: rgba(138, 43, 226, 0.7);
+      background: rgba(255, 255, 255, 0.07);
+    }
+    .reset__button {
+      width: 100%;
+      border: none;
+      border-radius: 12px;
+      padding: 15px 16px;
+      margin-top: 8px;
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+      color: #FFFFFF;
+      cursor: pointer;
+      background: linear-gradient(90deg, #8A2BE2 0%, #C724B1 100%);
+      transition: opacity 0.15s ease;
+    }
+    .reset__button:hover { opacity: 0.92; }
+    .reset__button:disabled { opacity: 0.5; cursor: not-allowed; }
+    .reset__error {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      color: #FF6B6B;
+      margin: 4px 0 12px;
+      min-height: 16px;
+      text-align: left;
+    }
+    .reset__hint {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.45);
+      margin-top: 20px;
+    }
+    .is-hidden { display: none !important; }
+    /* Minimal spinner for the initial link-verification state. */
+    .reset__spinner {
+      width: 34px;
+      height: 34px;
+      margin: 8px auto 0;
+      border: 3px solid rgba(255, 255, 255, 0.15);
+      border-top-color: #C724B1;
+      border-radius: 50%;
+      animation: reset-spin 0.8s linear infinite;
+    }
+    @keyframes reset-spin { to { transform: rotate(360deg); } }
+  </style>
+</head>
+<body>
+  <main class="reset">
+    <div class="reset__card">
+      <img class="reset__logo" src="../assets/icons/neomind_logo.svg" alt="neomind">
+
+      <!-- State 1: verifying the reset link (shown on load) -->
+      <section id="state-loading">
+        <h1 class="reset__title" data-i18n="loadingTitle">Checking your link…</h1>
+        <div class="reset__spinner"></div>
+      </section>
+
+      <!-- State 2: the reset form -->
+      <section id="state-form" class="is-hidden">
+        <h1 class="reset__title" data-i18n="formTitle">Set a new password</h1>
+        <p class="reset__text" data-i18n="formText">Choose a new password for your Neomind account.</p>
+        <form id="reset-form" novalidate>
+          <div class="reset__field">
+            <label class="reset__label" for="password" data-i18n="newPasswordLabel">New password</label>
+            <div class="reset__input-wrap">
+              <input class="reset__input" id="password" type="password" autocomplete="new-password" required>
+              <button type="button" class="reset__toggle" data-target="password" aria-label="Show password">
+                <svg class="icon-on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"/><circle cx="12" cy="12" r="3"/></svg>
+                <svg class="icon-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/><line x1="1" y1="1" x2="23" y2="23"/></svg>
+              </button>
+            </div>
+          </div>
+          <div class="reset__field">
+            <label class="reset__label" for="confirm" data-i18n="confirmPasswordLabel">Confirm new password</label>
+            <div class="reset__input-wrap">
+              <input class="reset__input" id="confirm" type="password" autocomplete="new-password" required>
+              <button type="button" class="reset__toggle" data-target="confirm" aria-label="Show password">
+                <svg class="icon-on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"/><circle cx="12" cy="12" r="3"/></svg>
+                <svg class="icon-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/><line x1="1" y1="1" x2="23" y2="23"/></svg>
+              </button>
+            </div>
+          </div>
+          <p class="reset__error" id="form-error"></p>
+          <button class="reset__button" id="submit-btn" type="submit" data-i18n="submitLabel">Update password</button>
+        </form>
+      </section>
+
+      <!-- State 3: success -->
+      <section id="state-success" class="is-hidden">
+        <h1 class="reset__title" data-i18n="successTitle">Password updated</h1>
+        <p class="reset__text" data-i18n="successText">Your password has been changed. Return to the Neomind app and log in with your new password.</p>
+      </section>
+
+      <!-- State 4: invalid / expired link -->
+      <section id="state-expired" class="is-hidden">
+        <h1 class="reset__title" data-i18n="expiredTitle">Link expired</h1>
+        <p class="reset__text" data-i18n="expiredText">This password reset link is invalid or has expired. Open the Neomind app and request a new one.</p>
+      </section>
+    </div>
+  </main>
+
+  <!-- Supabase JS client (UMD build) — used to consume the recovery session from the URL
+       and set the new password. The publishable key below is public by design. -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script>
+    (function () {
+      'use strict';
+
+      // ── Supabase project (public values — safe to ship in a static page) ──
+      var SUPABASE_URL = 'https://hnmdlrftrkxjgfkvvdkz.supabase.co';
+      var SUPABASE_ANON_KEY = 'sb_publishable_N1osJJe3urgHDd5dJEcr4Q_No6Dyitn';
+      var MIN_PASSWORD_LENGTH = 8;
+
+      // ── Localization (en / de), selected via the ?lang query param. ──
+      var STRINGS = {
+        en: {
+          loadingTitle: 'Checking your link…',
+          formTitle: 'Set a new password',
+          formText: 'Choose a new password for your Neomind account.',
+          newPasswordLabel: 'New password',
+          confirmPasswordLabel: 'Confirm new password',
+          submitLabel: 'Update password',
+          submitting: 'Updating…',
+          showPassword: 'Show password',
+          hidePassword: 'Hide password',
+          successTitle: 'Password updated',
+          successText: 'Your password has been changed. Return to the Neomind app and log in with your new password.',
+          expiredTitle: 'Link expired',
+          expiredText: 'This password reset link is invalid or has expired. Open the Neomind app and request a new one.',
+          errRequired: 'Required',
+          errTooShort: 'At least 8 characters.',
+          errMismatch: 'Passwords don’t match.',
+          errGeneric: 'Something went wrong. Please try again.',
+        },
+        de: {
+          loadingTitle: 'Link wird geprüft…',
+          formTitle: 'Neues Passwort festlegen',
+          formText: 'Wähle ein neues Passwort für dein Neomind Konto.',
+          newPasswordLabel: 'Neues Passwort',
+          confirmPasswordLabel: 'Neues Passwort bestätigen',
+          submitLabel: 'Passwort aktualisieren',
+          submitting: 'Wird aktualisiert…',
+          showPassword: 'Passwort anzeigen',
+          hidePassword: 'Passwort verbergen',
+          successTitle: 'Passwort aktualisiert',
+          successText: 'Dein Passwort wurde geändert. Kehre zur Neomind App zurück und melde dich mit deinem neuen Passwort an.',
+          expiredTitle: 'Link abgelaufen',
+          expiredText: 'Dieser Link zum Zurücksetzen ist ungültig oder abgelaufen. Öffne die Neomind App und fordere einen neuen an.',
+          errRequired: 'Erforderlich',
+          errTooShort: 'Mindestens 8 Zeichen.',
+          errMismatch: 'Passwörter stimmen nicht überein.',
+          errGeneric: 'Etwas ist schiefgelaufen. Bitte versuche es erneut.',
+        },
+      };
+
+      var params = new URLSearchParams(window.location.search);
+      var lang = params.get('lang') === 'de' ? 'de' : 'en';
+      var t = STRINGS[lang];
+      document.documentElement.lang = lang;
+
+      // Apply translations to every [data-i18n] element.
+      document.querySelectorAll('[data-i18n]').forEach(function (el) {
+        var key = el.getAttribute('data-i18n');
+        if (t[key]) el.textContent = t[key];
+      });
+
+      // ── Show/hide password toggles (independent of session, so wire them early) ──
+      document.querySelectorAll('.reset__toggle').forEach(function (btn) {
+        btn.setAttribute('aria-label', t.showPassword);
+        btn.addEventListener('click', function () {
+          var input = document.getElementById(btn.getAttribute('data-target'));
+          var reveal = input.type === 'password';
+          input.type = reveal ? 'text' : 'password';
+          btn.classList.toggle('is-visible', reveal);
+          btn.setAttribute('aria-label', reveal ? t.hidePassword : t.showPassword);
+        });
+      });
+
+      // ── State helpers ──
+      var states = {
+        loading: document.getElementById('state-loading'),
+        form: document.getElementById('state-form'),
+        success: document.getElementById('state-success'),
+        expired: document.getElementById('state-expired'),
+      };
+      function show(name) {
+        Object.keys(states).forEach(function (k) {
+          states[k].classList.toggle('is-hidden', k !== name);
+        });
+      }
+
+      // Local-only preview switch: ?preview=loading|form|success|expired forces a state
+      // so the layout can be reviewed without a real recovery link. Inert in production —
+      // it only does anything on localhost, so it can safely stay in the file.
+      var isLocal = location.hostname === 'localhost' || location.hostname === '127.0.0.1';
+      var preview = isLocal ? params.get('preview') : null;
+      if (preview && states[preview]) {
+        show(preview);
+        return;
+      }
+
+      // If Supabase failed to load (e.g. CDN blocked), fail gracefully.
+      if (!window.supabase || !window.supabase.createClient) {
+        show('expired');
+        return;
+      }
+
+      // Implicit flow: the reset email link redirects here with the session in the URL
+      // hash (#access_token=…&type=recovery). detectSessionInUrl lets supabase-js parse
+      // it. persistSession is off — nothing about this session is stored in the browser.
+      var client = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY, {
+        auth: {
+          flowType: 'implicit',
+          detectSessionInUrl: true,
+          persistSession: false,
+          autoRefreshToken: false,
+        },
+      });
+
+      var recoveryReady = false;
+      function markReady() {
+        if (recoveryReady) return;
+        recoveryReady = true;
+        show('form');
+      }
+
+      // The hash may instead carry an error (e.g. an already-expired link).
+      var hashParams = new URLSearchParams((window.location.hash || '').replace(/^#/, ''));
+      if (hashParams.get('error') || hashParams.get('error_code')) {
+        show('expired');
+        return;
+      }
+
+      // A valid recovery link establishes a session. Listen for it, and also poll
+      // getSession as a fallback in case the event fired before this handler attached.
+      client.auth.onAuthStateChange(function (event, session) {
+        if (event === 'PASSWORD_RECOVERY' || (session && event === 'SIGNED_IN')) markReady();
+      });
+
+      client.auth.getSession().then(function (res) {
+        if (res && res.data && res.data.session) markReady();
+        else {
+          // Give detectSessionInUrl a moment, then decide it's an invalid link.
+          setTimeout(function () {
+            client.auth.getSession().then(function (r2) {
+              if (r2 && r2.data && r2.data.session) markReady();
+              else if (!recoveryReady) show('expired');
+            });
+          }, 1200);
+        }
+      });
+
+      // ── Form submission ──
+      var form = document.getElementById('reset-form');
+      var pwInput = document.getElementById('password');
+      var confirmInput = document.getElementById('confirm');
+      var errorEl = document.getElementById('form-error');
+      var submitBtn = document.getElementById('submit-btn');
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        errorEl.textContent = '';
+
+        var pw = pwInput.value;
+        var confirm = confirmInput.value;
+
+        // Same rules and order as the app's signup form: required → min 8 chars → match.
+        if (!pw) { errorEl.textContent = t.errRequired; return; }
+        if (pw.length < MIN_PASSWORD_LENGTH) { errorEl.textContent = t.errTooShort; return; }
+        if (!confirm) { errorEl.textContent = t.errRequired; return; }
+        if (pw !== confirm) { errorEl.textContent = t.errMismatch; return; }
+
+        submitBtn.disabled = true;
+        submitBtn.textContent = t.submitting;
+
+        client.auth.updateUser({ password: pw }).then(function (res) {
+          if (res.error) {
+            // Surface Supabase's message (e.g. password policy), fall back to generic.
+            errorEl.textContent = res.error.message || t.errGeneric;
+            submitBtn.disabled = false;
+            submitBtn.textContent = t.submitLabel;
+            return;
+          }
+          // Success — end the session and show confirmation.
+          client.auth.signOut().catch(function () {});
+          show('success');
+        }).catch(function () {
+          errorEl.textContent = t.errGeneric;
+          submitBtn.disabled = false;
+          submitBtn.textContent = t.submitLabel;
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
