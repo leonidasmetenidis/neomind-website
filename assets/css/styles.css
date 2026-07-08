@@ -792,7 +792,7 @@ body {
 
   .lang-switch__toggle {
     padding: 8px 14px;
-    font-size: 14px;
+    font-size: 15px;
   }
 
   .lang-switch__flag {
@@ -805,20 +805,28 @@ body {
     padding: 120px 20px 60px;
   }
 
+  /* All section eyebrows share .hero__eyebrow (hero, features, FAQ). */
+  .hero__eyebrow {
+    font-size: 14px;
+  }
+
   .hero__headline {
-    font-size: clamp(42px, 10vw, 52px);
+    font-size: clamp(44px, 10vw, 52px);
     line-height: 1.15;
     overflow-wrap: break-word;
   }
 
+  /* Section headlines track the hero headline size on mobile. */
   .problem .headline,
-  .features__headline {
-    font-size: clamp(34px, 9vw, 46px);
+  .features__headline,
+  .faq__headline {
+    font-size: clamp(44px, 10vw, 52px);
     line-height: 1.25;
   }
 
-  .hero__subheadline {
-    font-size: 15px;
+  .hero__subheadline,
+  .problem__text {
+    font-size: 17px;
   }
 
   .hero__badges {
@@ -840,23 +848,30 @@ body {
   }
 
   /* Problem — full-bleed, zoomed image shifted right (as on desktop), with the
-     copy overlaid on the dark left side. */
+     copy overlaid on the dark left side. The card keeps its 480px look but is
+     free to grow: the image fills it as a background layer and the copy sits in
+     flow, so long headlines never clip against a fixed height on narrow phones. */
   .problem {
     padding: 48px 0;
   }
 
   .problem__card {
+    min-height: 480px;
     border-radius: 0;
   }
 
   .problem__image {
-    height: 480px;
+    position: absolute;
+    inset: 0;
+    height: 100%;
     object-fit: cover;
     transform: none;
   }
 
   .problem__content {
-    inset: 0;
+    position: relative;
+    z-index: 1;
+    inset: auto;
     max-width: 100%;
     justify-content: flex-start;
     padding: 48px 24px;
@@ -884,7 +899,11 @@ body {
   }
 
   .feature-card__title {
-    font-size: 26px;
+    font-size: 28px;
+  }
+
+  .feature-card__text {
+    font-size: 17px;
   }
 
   /* FAQ */
@@ -898,12 +917,12 @@ body {
 
   .faq__question {
     padding: 18px 20px;
-    font-size: 16px;
+    font-size: 17px;
   }
 
   .faq__answer > p {
     padding: 0 20px;
-    font-size: 15px;
+    font-size: 16px;
   }
 
   .faq__item.is-open .faq__answer > p {
@@ -926,13 +945,26 @@ body {
 
   .cta__headline {
     width: 100%;
-    font-size: clamp(38px, 10vw, 52px);
+    font-size: clamp(44px, 10vw, 52px);
     line-height: 1.15;
+  }
+
+  .cta__subheadline {
+    font-size: 17px;
   }
 
   /* Footer */
   .footer {
     padding: 80px 20px 40px;
+  }
+
+  .footer__heading {
+    font-size: 19px;
+  }
+
+  .footer__link,
+  .footer__copyright {
+    font-size: 17px;
   }
 
   .footer__inner {
