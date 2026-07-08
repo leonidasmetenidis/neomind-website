@@ -816,11 +816,11 @@ body {
     overflow-wrap: break-word;
   }
 
-  /* Section headlines track the hero headline size on mobile. */
+  /* Section headlines sit one step below the hero headline on mobile. */
   .problem .headline,
   .features__headline,
   .faq__headline {
-    font-size: clamp(44px, 10vw, 52px);
+    font-size: clamp(40px, 10vw, 48px);
     line-height: 1.25;
   }
 
@@ -945,7 +945,7 @@ body {
 
   .cta__headline {
     width: 100%;
-    font-size: clamp(44px, 10vw, 52px);
+    font-size: clamp(40px, 10vw, 48px);
     line-height: 1.15;
   }
 
