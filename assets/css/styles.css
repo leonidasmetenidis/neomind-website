@@ -1227,6 +1227,12 @@ body {
   height: 44px;
 }
 
+@media (max-width: 768px) {
+  .modal__text {
+    font-size: 16px;
+  }
+}
+
 /* ==========================================================================
    Legal / content pages (Terms, Privacy, Cookie Policy, Legal Notice…)
    ========================================================================== */
@@ -1334,6 +1340,31 @@ body {
   .legal {
     padding: 120px 24px 64px;
   }
+
+  /* Type scale for phones, matching the home page. Without this the page title
+     pins to the base .headline clamp minimum (28px) and the body copy keeps its
+     desktop sizes. */
+  .legal__headline {
+    font-size: clamp(40px, 10vw, 48px);
+  }
+
+  .legal__subhead {
+    font-size: 19px;
+  }
+
+  .legal__text,
+  .legal__doc p,
+  .legal__doc ul {
+    font-size: 17px;
+  }
+
+  .legal__lead {
+    font-size: 16px;
+  }
+
+  .legal__note {
+    font-size: 15px;
+  }
 }
 
 /* ==========================================================================
@@ -1408,6 +1439,31 @@ body {
 
 .about__contact {
   margin-top: 28px;
+}
+
+/* Must follow the .about__* base rules above: same specificity, so the later
+   declaration wins. */
+@media (max-width: 768px) {
+  .about__greeting {
+    font-size: 21px;
+  }
+
+  .about__question {
+    font-size: 20px;
+  }
+
+  .about__signoff {
+    font-size: 17px;
+  }
+
+  .about__role,
+  .about__caption {
+    font-size: 15px;
+  }
+
+  .about__photo--placeholder {
+    font-size: 16px;
+  }
 }
 
 /* ==========================================================================
@@ -1703,6 +1759,27 @@ body.cc-banner-open {
 
   .cookie-consent__dialog {
     padding: 22px 20px 20px;
+  }
+
+  /* The consent dialog carried the smallest type on the site and cannot be
+     dismissed without reading it, so bump it a step on phones. */
+  .cookie-consent__title {
+    font-size: 24px;
+  }
+
+  .cookie-consent__text,
+  .cookie-consent__links {
+    font-size: 15px;
+  }
+
+  .cookie-consent__cat-title,
+  .cookie-consent__btn {
+    font-size: 16px;
+  }
+
+  .cookie-consent__cat-desc,
+  .cookie-consent__always {
+    font-size: 14px;
   }
 }
 

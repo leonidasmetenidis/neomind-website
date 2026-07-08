@@ -147,6 +147,19 @@
       animation: reset-spin 0.8s linear infinite;
     }
     @keyframes reset-spin { to { transform: rotate(360deg); } }
+
+    /* Larger type on phones, matching the site-wide mobile scale. The input and
+       button stay at 16px: anything smaller makes iOS Safari zoom on focus. */
+    @media (max-width: 768px) {
+      .reset__text {
+        font-size: 16px;
+      }
+      .reset__label,
+      .reset__error,
+      .reset__hint {
+        font-size: 14px;
+      }
+    }
   </style>
 </head>
 <body>
