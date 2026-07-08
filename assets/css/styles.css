@@ -835,8 +835,10 @@ body {
     margin-top: 28px;
   }
 
+  /* Match the footer badges (64px). Covers the CTA section too, which reuses
+     .hero__badges. */
   .hero__badge img {
-    height: 56px;
+    height: 64px;
   }
 
   /* Full-bleed hero image — break out of the hero's 20px side padding to span
