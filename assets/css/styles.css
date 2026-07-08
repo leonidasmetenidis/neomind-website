@@ -786,10 +786,6 @@ body {
     gap: 8px;
   }
 
-  .header__logo img {
-    height: 24px;
-  }
-
   .btn-try {
     display: none;
   }
