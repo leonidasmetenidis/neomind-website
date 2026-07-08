@@ -18,7 +18,7 @@ const translations = {
     features_eyebrow: 'Wie Neomind funktioniert',
     features_headline: 'Hier ist alles, was du brauchst, um deine innere Welt zu verändern.',
     feature_1_title: '10.000+ Affirmationen<br>sofort einsatzbereit',
-    feature_1_text: 'Eine wachsende Bibliothek rund um mentale Gesundheit, persönliches Wachstum, Liebe, Gesundheit, Fülle und mehr. Einfach swipen und aufnehmen.',
+    feature_1_text: 'Eine wachsende Bibliothek rund um mentale Gesundheit, persönliches Wachstum, Liebe, Gesundheit, Fülle und mehr.',
     feature_7_title: 'Üben, das sich<br>mühelos anfühlt',
     feature_7_text: 'Intuitives Swipen, deine Wahl aus Stimme, Musik und Theme. Einfach abspielen und zuhören.',
     feature_2_title: 'Erstelle eigene<br>Affirmationen mit KI',
