@@ -13,7 +13,7 @@ const translations = {
     hero_headline: 'Entwickle ein Mindset,<br>das dein Leben verändert.',
     hero_subheadline: 'Neomind verbindet Affirmationen und Visualisierung mit intelligenter KI für dein Mindset. Entwickelt, um dir zu helfen, größer zu denken, dich besser zu fühlen und genau das Leben zu führen, das du dir wünschst.',
     problem_headline: 'Du optimierst alles, außer deine Denkweise.',
-    problem_text: 'Du trainierst hart für deinen Körper. Du machst Überstunden für deine Karriere. Du liest, um dazuzulernen. Aber dein Mindset, das, was am Ende entscheidet, ob du überhaupt loslegst, läuft einfach auf Autopilot mit dem, was irgendwann mal hängengeblieben ist.',
+    problem_text: 'Du trainierst hart für deinen Körper. Du machst Überstunden für deine Karriere. Du liest, um dazuzulernen. Aber dein Mindset läuft einfach auf Autopilot. Mit allem, was irgendwann mal hängengeblieben ist.',
     features_eyebrow: 'Wie Neomind funktioniert',
     features_headline: '7 Minuten am Tag reichen, um dein Denken zu verändern.',
     feature_1_title: '10.000+ Affirmationen<br>sofort einsatzbereit',
