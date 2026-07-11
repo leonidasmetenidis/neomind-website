@@ -314,12 +314,23 @@ function renderFaq(lang) {
   const links = window.NEOMIND_LINKS;
   if (!links) return;
 
-  document.querySelectorAll('a[aria-label="Download on the App Store"]').forEach(function (a) {
-    a.href = links.appStore;
-  });
-  document.querySelectorAll('a[aria-label="Get it on Google Play"]').forEach(function (a) {
-    a.href = links.playStore;
-  });
+  // On phones the store URL is handed off to the native App Store / Play Store
+  // app, so a new tab would only leave an empty one behind. Desktop keeps the
+  // site open in the current tab instead.
+  const isMobile = /android|iPad|iPhone|iPod/i.test(navigator.userAgent || '');
+
+  function apply(selector, href) {
+    document.querySelectorAll(selector).forEach(function (a) {
+      a.href = href;
+      if (!isMobile) {
+        a.target = '_blank';
+        a.rel = 'noopener noreferrer';
+      }
+    });
+  }
+
+  apply('a[aria-label="Download on the App Store"]', links.appStore);
+  apply('a[aria-label="Get it on Google Play"]', links.playStore);
 })();
 
 // QR widget — dismiss button hides it for the rest of the session.
