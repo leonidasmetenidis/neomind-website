@@ -4,16 +4,33 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex, nofollow">
-  <title>Reset password · Neomind</title>
+  <title data-i18n="pageTitle">Reset password · Neomind</title>
   <link rel="icon" type="image/png" href="../assets/icons/special/neomind_app_watermark_icon.png">
   <link rel="preload" href="../assets/fonts/woff2/Inter-var.woff2" as="font" type="font/woff2" crossorigin>
   <!-- Reuse the site's self-hosted fonts and base body styles. -->
   <link rel="stylesheet" href="../assets/css/styles.css">
   <style>
     /* Standalone, distraction-free auth page. No site header/footer is injected here —
-       a password reset should keep the user focused on the single task. */
-    .reset {
+       a password reset should keep the user focused on the single task. The only
+       piece of site chrome kept is the language switch (same component and styles
+       as the header one, see .lang-switch in assets/css/styles.css), so a German
+       user can read the form in their language. */
+    /* Full-height column: the language bar on top, the card filling the rest.
+       (The scripts are display:none, so they never become flex items.) */
+    body {
       min-height: 100dvh;
+      display: flex;
+      flex-direction: column;
+    }
+    /* Its own slim bar rather than a fixed overlay, so the switch can never sit
+       on top of the card on short screens. */
+    .reset-header {
+      display: flex;
+      justify-content: flex-end;
+      padding: 24px 24px 0;
+    }
+    .reset {
+      flex: 1;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -151,6 +168,9 @@
     /* Larger type on phones, matching the site-wide mobile scale. The input and
        button stay at 16px: anything smaller makes iOS Safari zoom on focus. */
     @media (max-width: 768px) {
+      .reset-header {
+        padding: 20px 20px 0;
+      }
       .reset__text {
         font-size: 16px;
       }
@@ -163,6 +183,31 @@
   </style>
 </head>
 <body>
+  <header class="reset-header">
+    <!-- Same markup and styles as the site header switch (assets/js/layout.js),
+         but it re-renders this page's copy in place instead of reloading: the
+         recovery session lives in the URL and would be lost on a navigation. -->
+    <div class="lang-switch">
+      <button class="lang-switch__toggle" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Select language">
+        <img class="lang-switch__flag" src="../assets/images/us_flag.webp" alt="" width="20" height="20">
+        <span class="lang-switch__label">EN</span>
+        <svg class="lang-switch__chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="lang-menu" role="menu">
+        <button class="lang-menu__item" type="button" role="menuitem" data-lang="de" data-flag="../assets/images/de_flag.webp" data-label="DE">
+          <img class="lang-menu__flag" src="../assets/images/de_flag.webp" alt="" width="20" height="20">
+          <span class="lang-menu__name">Deutsch</span>
+          <svg class="lang-menu__check" width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <button class="lang-menu__item is-active" type="button" role="menuitem" data-lang="en" data-flag="../assets/images/us_flag.webp" data-label="EN">
+          <img class="lang-menu__flag" src="../assets/images/us_flag.webp" alt="" width="20" height="20">
+          <span class="lang-menu__name">English</span>
+          <svg class="lang-menu__check" width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
   <main class="reset">
     <div class="reset__card">
       <img class="reset__logo" src="../assets/icons/neomind_logo.svg" alt="neomind">
@@ -229,9 +274,12 @@
       var SUPABASE_ANON_KEY = 'sb_publishable_N1osJJe3urgHDd5dJEcr4Q_No6Dyitn';
       var MIN_PASSWORD_LENGTH = 8;
 
-      // ── Localization (en / de), selected via the ?lang query param. ──
+      // ── Localization (en / de). Initial language comes from ?lang, then the
+      // choice saved on the marketing site, then the browser; the header switch
+      // changes it live afterwards. ──
       var STRINGS = {
         en: {
+          pageTitle: 'Reset password · Neomind',
           loadingTitle: 'Checking your link…',
           formTitle: 'Set a new password',
           formText: 'Choose a new password for your Neomind account.',
@@ -251,6 +299,7 @@
           errGeneric: 'Something went wrong. Please try again.',
         },
         de: {
+          pageTitle: 'Passwort zurücksetzen · Neomind',
           loadingTitle: 'Link wird geprüft…',
           formTitle: 'Neues Passwort festlegen',
           formText: 'Wähle ein neues Passwort für dein Neomind Konto.',
@@ -272,19 +321,126 @@
       };
 
       var params = new URLSearchParams(window.location.search);
-      var lang = params.get('lang') === 'de' ? 'de' : 'en';
-      var t = STRINGS[lang];
-      document.documentElement.lang = lang;
+      var SUPPORTED = ['en', 'de'];
 
-      // Apply translations to every [data-i18n] element.
-      document.querySelectorAll('[data-i18n]').forEach(function (el) {
-        var key = el.getAttribute('data-i18n');
-        if (t[key]) el.textContent = t[key];
-      });
+      // ── Form elements (looked up early: the language switch touches them) ──
+      var form = document.getElementById('reset-form');
+      var pwInput = document.getElementById('password');
+      var confirmInput = document.getElementById('confirm');
+      var errorEl = document.getElementById('form-error');
+      var submitBtn = document.getElementById('submit-btn');
+
+      // The error currently on screen: a STRINGS key for our own validation
+      // messages (re-translated on a language change), null for a message that
+      // came verbatim from Supabase.
+      var errorKey = null;
+      function setError(key) {
+        errorKey = key;
+        errorEl.textContent = key ? t[key] : '';
+      }
+      function setRawError(message) {
+        errorKey = null;
+        errorEl.textContent = message;
+      }
+
+      // The active dictionary. Reassigned by applyLanguage, and read (not
+      // captured) by every handler below, so they always use the current one.
+      var t = STRINGS.en;
+
+      // Re-render every piece of copy in the given language. Everything happens
+      // in place — no reload, because the recovery session lives in the URL and
+      // a navigation would throw it away.
+      function applyLanguage(next) {
+        t = STRINGS[next];
+        document.documentElement.lang = next;
+
+        document.querySelectorAll('[data-i18n]').forEach(function (el) {
+          var key = el.getAttribute('data-i18n');
+          if (t[key]) el.textContent = t[key];
+        });
+
+        // Elements whose text depends on state, so [data-i18n] alone isn't enough.
+        document.querySelectorAll('.reset__toggle').forEach(function (btn) {
+          btn.setAttribute('aria-label', btn.classList.contains('is-visible') ? t.hidePassword : t.showPassword);
+        });
+        if (submitBtn.disabled) submitBtn.textContent = t.submitting;
+        if (errorKey) errorEl.textContent = t[errorKey];
+      }
+
+      // ── Language switch (same behaviour as the site header one) ──
+      (function () {
+        var switcher = document.querySelector('.lang-switch');
+        if (!switcher) return;
+
+        var toggle = switcher.querySelector('.lang-switch__toggle');
+        var flag = switcher.querySelector('.lang-switch__flag');
+        var label = switcher.querySelector('.lang-switch__label');
+        var items = switcher.querySelectorAll('.lang-menu__item');
+
+        function close() {
+          switcher.classList.remove('is-open');
+          toggle.setAttribute('aria-expanded', 'false');
+        }
+
+        function selectLang(next) {
+          items.forEach(function (item) {
+            var active = item.getAttribute('data-lang') === next;
+            item.classList.toggle('is-active', active);
+            if (active) {
+              flag.src = item.getAttribute('data-flag');
+              label.textContent = item.getAttribute('data-label');
+            }
+          });
+          applyLanguage(next);
+          try { localStorage.setItem('lang', next); } catch (e) {}
+
+          // Keep ?lang= in step, without touching the hash the recovery session
+          // arrived in. replaceState avoids a reload.
+          try {
+            var url = new URL(window.location.href);
+            url.searchParams.set('lang', next);
+            history.replaceState(null, '', url);
+          } catch (e) {}
+        }
+
+        toggle.addEventListener('click', function (e) {
+          e.stopPropagation();
+          var isOpen = switcher.classList.contains('is-open');
+          switcher.classList.toggle('is-open', !isOpen);
+          toggle.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
+        });
+
+        items.forEach(function (item) {
+          item.addEventListener('click', function () {
+            selectLang(item.getAttribute('data-lang'));
+            close();
+          });
+        });
+
+        document.addEventListener('click', function (e) {
+          if (!switcher.contains(e.target)) close();
+        });
+
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape') close();
+        });
+
+        // Initial language: ?lang= wins, then the choice saved on the marketing
+        // site, then the browser's preference, then English.
+        var urlLang = params.get('lang');
+        var saved;
+        try { saved = localStorage.getItem('lang'); } catch (e) {}
+        var browserLang = (navigator.languages || [navigator.language || ''])
+          .map(function (l) { return String(l).slice(0, 2).toLowerCase(); })
+          .filter(function (l) { return SUPPORTED.indexOf(l) !== -1; })[0];
+
+        selectLang(SUPPORTED.indexOf(urlLang) !== -1 ? urlLang
+          : SUPPORTED.indexOf(saved) !== -1 ? saved
+          : browserLang || 'en');
+      })();
 
       // ── Show/hide password toggles (independent of session, so wire them early) ──
       document.querySelectorAll('.reset__toggle').forEach(function (btn) {
-        btn.setAttribute('aria-label', t.showPassword);
         btn.addEventListener('click', function () {
           var input = document.getElementById(btn.getAttribute('data-target'));
           var reveal = input.type === 'password';
@@ -369,24 +525,18 @@
       });
 
       // ── Form submission ──
-      var form = document.getElementById('reset-form');
-      var pwInput = document.getElementById('password');
-      var confirmInput = document.getElementById('confirm');
-      var errorEl = document.getElementById('form-error');
-      var submitBtn = document.getElementById('submit-btn');
-
       form.addEventListener('submit', function (e) {
         e.preventDefault();
-        errorEl.textContent = '';
+        setError(null);
 
         var pw = pwInput.value;
         var confirm = confirmInput.value;
 
         // Same rules and order as the app's signup form: required → min 8 chars → match.
-        if (!pw) { errorEl.textContent = t.errRequired; return; }
-        if (pw.length < MIN_PASSWORD_LENGTH) { errorEl.textContent = t.errTooShort; return; }
-        if (!confirm) { errorEl.textContent = t.errRequired; return; }
-        if (pw !== confirm) { errorEl.textContent = t.errMismatch; return; }
+        if (!pw) { setError('errRequired'); return; }
+        if (pw.length < MIN_PASSWORD_LENGTH) { setError('errTooShort'); return; }
+        if (!confirm) { setError('errRequired'); return; }
+        if (pw !== confirm) { setError('errMismatch'); return; }
 
         submitBtn.disabled = true;
         submitBtn.textContent = t.submitting;
@@ -394,7 +544,8 @@
         client.auth.updateUser({ password: pw }).then(function (res) {
           if (res.error) {
             // Surface Supabase's message (e.g. password policy), fall back to generic.
-            errorEl.textContent = res.error.message || t.errGeneric;
+            if (res.error.message) setRawError(res.error.message);
+            else setError('errGeneric');
             submitBtn.disabled = false;
             submitBtn.textContent = t.submitLabel;
             return;
@@ -403,7 +554,7 @@
           client.auth.signOut().catch(function () {});
           show('success');
         }).catch(function () {
-          errorEl.textContent = t.errGeneric;
+          setError('errGeneric');
           submitBtn.disabled = false;
           submitBtn.textContent = t.submitLabel;
         });
