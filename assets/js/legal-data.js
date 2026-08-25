@@ -7,8 +7,8 @@ window.LEGAL_CONTENT = {
   privacy: {
     meta: {
       updated: {
-        en: 'Last updated: 22 June 2026 · Effective date: 22 June 2026',
-        de: 'Zuletzt aktualisiert: 22. Juni 2026 · Gültig ab: 22. Juni 2026',
+        en: 'Last updated: 26 August 2026 · Effective date: 26 August 2026',
+        de: 'Zuletzt aktualisiert: 26. August 2026 · Gültig ab: 26. August 2026',
       },
       note: {
         en: 'This Privacy Policy is drafted to align with the EU General Data Protection Regulation (GDPR), the German Federal Data Protection Act (BDSG), and the German Telecommunications Digital Services Data Protection Act (TDDDG). Some sections describe third-party services that may not be active yet. Services that require your consent (in particular analytics and advertising) are only used after you have given consent, which can be withdrawn at any time.',
@@ -92,7 +92,7 @@ window.LEGAL_CONTENT = {
 </ul>
 <p><strong>5.2 User-generated content</strong></p>
 <ul>
-<li>Content you create or upload, such as custom affirmations and visualizations, categories and sets, recorded audio, uploaded images, videos, and background music</li>
+<li>Content you create or upload, such as custom affirmations and visualizations, categories and sets, recorded audio, and uploaded images</li>
 <li>Favourites and other personalisation choices</li>
 </ul>
 <p><strong>5.3 AI generation data</strong></p>
@@ -138,7 +138,7 @@ window.LEGAL_CONTENT = {
 </ul>
 <p><strong>5.2 Nutzergenerierte Inhalte</strong></p>
 <ul>
-<li>Inhalte, die du erstellst oder hochlädst, etwa eigene Affirmationen und Visualisierungen, Kategorien und Sets, aufgenommene Audiodateien, hochgeladene Bilder, Videos und Hintergrundmusik</li>
+<li>Inhalte, die du erstellst oder hochlädst, etwa eigene Affirmationen und Visualisierungen, Kategorien und Sets, aufgenommene Audiodateien und hochgeladene Bilder</li>
 <li>Favoriten und andere Personalisierungsentscheidungen</li>
 </ul>
 <p><strong>5.3 Daten zur KI-Generierung</strong></p>
@@ -234,7 +234,7 @@ window.LEGAL_CONTENT = {
 <p><strong>8.3 AI content generation</strong><br>When you use the AI feature, the input you provide is transmitted through our backend to our AI provider (Anthropic) to generate the requested content, which is returned to you and stored with your content. We also maintain usage counters to enforce monthly generation limits associated with your access tier. Legal basis: Art. 6(1)(b) GDPR. See Section 9.2 for details on the provider and Section 14 for international transfers.</p>
 <p><strong>8.4 Subscriptions and entitlements</strong><br>We process your subscription status and related identifiers, provided by the App Stores and our subscription provider, to grant the correct access tier, manage trials and renewals, and restore purchases. Payment processing is carried out by Apple and Google. Legal basis: Art. 6(1)(b) and (c) GDPR.</p>
 <p><strong>8.5 Communications</strong><br>When you contact us by email, we process your message and contact details to handle your request. Service-related emails (for example, security or account notices) are sent via our email provider. Legal basis: Art. 6(1)(b) and (f) GDPR.</p>
-<p><strong>8.6 Security and operation</strong><br>We process technical and connection data to operate, secure, and troubleshoot the Service, to prevent and detect misuse and fraud, and to ensure stability. Legal basis: Art. 6(1)(f) GDPR.</p>
+<p><strong>8.6 Security and operation</strong><br>We process technical and connection data to operate, secure, and troubleshoot the Service, to prevent and detect misuse and fraud, and to ensure stability. This includes protecting our authentication and account forms with a bot-prevention service (see Section 9.6). Legal basis: Art. 6(1)(f) GDPR.</p>
 <p><strong>8.7 Analytics and advertising (only with consent)</strong><br>Subject to your consent, we and the providers listed in Section 11 process usage and event data to understand how the Service is used, improve it, and measure marketing campaigns. These tools are not loaded before you consent. Legal basis: Art. 6(1)(a) GDPR and § 25(1) TDDDG.</p>`,
         },
         de: {
@@ -244,7 +244,7 @@ window.LEGAL_CONTENT = {
 <p><strong>8.3 KI-Inhaltserstellung</strong><br>Wenn du die KI-Funktion nutzt, werden deine Eingaben über unser Backend an unseren KI-Anbieter (Anthropic) übermittelt, um die angeforderten Inhalte zu erzeugen, die dir zurückgegeben und mit deinen Inhalten gespeichert werden. Außerdem führen wir Nutzungszähler, um die monatlichen Generierungslimits deiner Zugangsstufe durchzusetzen. Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO. Einzelheiten zum Anbieter findest du in Abschnitt 9.2 und zu internationalen Übermittlungen in Abschnitt 14.</p>
 <p><strong>8.4 Abonnements und Berechtigungen</strong><br>Wir verarbeiten deinen Abonnementstatus und zugehörige Kennungen, die uns von den App Stores und unserem Abonnement-Anbieter bereitgestellt werden, um die richtige Zugangsstufe zu gewähren, Testphasen und Verlängerungen zu verwalten und Käufe wiederherzustellen. Die Zahlungsabwicklung erfolgt durch Apple und Google. Rechtsgrundlage: Art. 6 Abs. 1 lit. b und c DSGVO.</p>
 <p><strong>8.5 Kommunikation</strong><br>Wenn du uns per E-Mail kontaktierst, verarbeiten wir deine Nachricht und Kontaktdaten, um dein Anliegen zu bearbeiten. Servicebezogene E-Mails (zum Beispiel Sicherheits- oder Kontohinweise) werden über unseren E-Mail-Anbieter versendet. Rechtsgrundlage: Art. 6 Abs. 1 lit. b und f DSGVO.</p>
-<p><strong>8.6 Sicherheit und Betrieb</strong><br>Wir verarbeiten technische und Verbindungsdaten, um den Dienst zu betreiben, zu sichern und Störungen zu beheben, Missbrauch und Betrug zu verhindern und zu erkennen und Stabilität zu gewährleisten. Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO.</p>
+<p><strong>8.6 Sicherheit und Betrieb</strong><br>Wir verarbeiten technische und Verbindungsdaten, um den Dienst zu betreiben, zu sichern und Störungen zu beheben, Missbrauch und Betrug zu verhindern und zu erkennen und Stabilität zu gewährleisten. Dazu gehört der Schutz unserer Authentifizierungs- und Kontoformulare durch einen Bot-Schutzdienst (siehe Abschnitt 9.6). Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO.</p>
 <p><strong>8.7 Analyse und Werbung (nur mit Einwilligung)</strong><br>Vorbehaltlich deiner Einwilligung verarbeiten wir und die in Abschnitt 11 aufgeführten Anbieter Nutzungs- und Ereignisdaten, um zu verstehen, wie der Dienst genutzt wird, ihn zu verbessern und Marketingkampagnen zu messen. Diese Tools werden nicht geladen, bevor du einwilligst. Rechtsgrundlage: Art. 6 Abs. 1 lit. a DSGVO und § 25 Abs. 1 TDDDG.</p>`,
         },
       },
@@ -252,23 +252,25 @@ window.LEGAL_CONTENT = {
         en: {
           head: '9. Third-Party Service Providers (Detailed)',
           body: `<p>To operate the Service, we use carefully selected service providers. Where they process personal data on our behalf, we conclude data processing agreements with them in accordance with Art. 28 GDPR. We do not sell your personal data. The following describes each provider, the data involved, and the safeguards.</p>
-<p><strong>9.1 Supabase: backend hosting, authentication, database, and storage</strong><br>Data processed: account data, settings, User-generated content, AI input and output, subscription status, and technical/connection data. Purpose: hosting our application backend; authenticating users; storing the database and uploaded files (images, audio, video, music). Legal basis: Art. 6(1)(b) GDPR (and Art. 6(1)(f) for security/operation). Location: hosted on Amazon Web Services (AWS) infrastructure in the United States (US East, Northern Virginia region). This is a transfer to a third country (see Section 14). Relationship: processor under Art. 28 GDPR.</p>
+<p><strong>9.1 Supabase: backend hosting, authentication, database, and storage</strong><br>Data processed: account data, settings, User-generated content, AI input and output, subscription status, and technical/connection data. Purpose: hosting our application backend; authenticating users; storing the database and uploaded files (images and audio). Legal basis: Art. 6(1)(b) GDPR (and Art. 6(1)(f) for security/operation). Location: hosted on Amazon Web Services (AWS) infrastructure in the United States (US East, Northern Virginia region). This is a transfer to a third country (see Section 14). Relationship: processor under Art. 28 GDPR.</p>
 <p><strong>9.2 Anthropic: AI content generation</strong><br>Data processed: the prompt and input text you submit for generation, and the generated output. Purpose: generating affirmations and visualizations based on your input, accessed server-side through our backend. Legal basis: Art. 6(1)(b) GDPR. Location: may process data in the United States (see Section 14). Relationship: processor under Art. 28 GDPR. We use the provider's API and do not permit the use of your input to train its general models beyond what is contractually agreed for providing the service.</p>
 <p><strong>9.3 RevenueCat: subscription management</strong><br>Data processed: subscription and purchase identifiers and entitlement status, and a pseudonymous app user identifier. Purpose: validating and managing subscriptions and entitlements across the App Stores. Legal basis: Art. 6(1)(b) GDPR. Location: may process data in the United States (see Section 14). Relationship: processor under Art. 28 GDPR.</p>
 <p><strong>9.4 Apple and Google: App Stores, payments, and platform sign-in</strong><br>Data processed: purchase, payment, and platform-authentication data that you provide directly to these platforms. Purpose: distributing the app, processing payments and subscriptions, and providing Sign in with Apple / Google Sign-In. Role: Apple and Google act as independent controllers for the platform and payment processes they operate. We do not receive your full payment details. Their processing is governed by their own privacy policies.</p>
 <p><strong>9.5 Maileroo: email delivery</strong><br>Data processed: your email address and the content of the emails sent. Purpose: delivering transactional emails and, where applicable and with consent, other emails. Legal basis: Art. 6(1)(b) GDPR; Art. 6(1)(a) GDPR for marketing emails. Relationship: processor under Art. 28 GDPR.</p>
-<p><strong>9.6 Analytics and advertising providers (only with consent)</strong><br>See Section 11 for the detailed list and conditions.</p>
+<p><strong>9.6 Cloudflare Turnstile: bot and abuse prevention</strong><br>Data processed: your IP address, basic technical and browser/device information, and interaction signals needed to tell humans apart from automated bots, together with a challenge token. Purpose: protecting our authentication and account forms (sign-up, sign-in, password reset, and email/password changes) against automated abuse, credential-stuffing, and spam. Legal basis: our legitimate interest in the security and integrity of the Service, Art. 6(1)(f) GDPR; this is a strictly necessary security measure and does not require consent. Provider: Cloudflare, Inc. Location: may process data in the United States (see Section 14). Relationship: processor under Art. 28 GDPR. Cloudflare Turnstile is designed to operate without tracking you across websites and without serving advertising.</p>
+<p><strong>9.7 Analytics and advertising providers (only with consent)</strong><br>See Section 11 for the detailed list and conditions.</p>
 <p>We may engage additional or alternative providers in the future for the same purposes; we will update this Policy accordingly and, where required, obtain your consent before activating them.</p>`,
         },
         de: {
           head: '9. Drittanbieter von Diensten (im Detail)',
           body: `<p>Zum Betrieb des Dienstes setzen wir sorgfältig ausgewählte Dienstleister ein. Soweit diese personenbezogene Daten in unserem Auftrag verarbeiten, schließen wir mit ihnen Auftragsverarbeitungsverträge nach Art. 28 DSGVO. Wir verkaufen deine personenbezogenen Daten nicht. Im Folgenden werden die einzelnen Anbieter, die betroffenen Daten und die Schutzmaßnahmen beschrieben.</p>
-<p><strong>9.1 Supabase: Backend-Hosting, Authentifizierung, Datenbank und Speicher</strong><br>Verarbeitete Daten: Kontodaten, Einstellungen, nutzergenerierte Inhalte, KI-Eingaben und -Ausgaben, Abonnementstatus sowie technische Daten/Verbindungsdaten. Zweck: Hosting unseres Anwendungs-Backends; Authentifizierung von Nutzern; Speicherung der Datenbank und hochgeladener Dateien (Bilder, Audio, Video, Musik). Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO (und Art. 6 Abs. 1 lit. f für Sicherheit/Betrieb). Standort: gehostet auf der Infrastruktur von Amazon Web Services (AWS) in den Vereinigten Staaten (Region US East, Northern Virginia). Dies ist eine Übermittlung in ein Drittland (siehe Abschnitt 14). Verhältnis: Auftragsverarbeiter nach Art. 28 DSGVO.</p>
+<p><strong>9.1 Supabase: Backend-Hosting, Authentifizierung, Datenbank und Speicher</strong><br>Verarbeitete Daten: Kontodaten, Einstellungen, nutzergenerierte Inhalte, KI-Eingaben und -Ausgaben, Abonnementstatus sowie technische Daten/Verbindungsdaten. Zweck: Hosting unseres Anwendungs-Backends; Authentifizierung von Nutzern; Speicherung der Datenbank und hochgeladener Dateien (Bilder und Audio). Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO (und Art. 6 Abs. 1 lit. f für Sicherheit/Betrieb). Standort: gehostet auf der Infrastruktur von Amazon Web Services (AWS) in den Vereinigten Staaten (Region US East, Northern Virginia). Dies ist eine Übermittlung in ein Drittland (siehe Abschnitt 14). Verhältnis: Auftragsverarbeiter nach Art. 28 DSGVO.</p>
 <p><strong>9.2 Anthropic: KI-Inhaltserstellung</strong><br>Verarbeitete Daten: die von dir zur Generierung übermittelten Eingaben und Texte sowie das generierte Ergebnis. Zweck: Erstellung von Affirmationen und Visualisierungen auf Grundlage deiner Eingaben, serverseitig über unser Backend aufgerufen. Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO. Standort: kann Daten in den Vereinigten Staaten verarbeiten (siehe Abschnitt 14). Verhältnis: Auftragsverarbeiter nach Art. 28 DSGVO. Wir nutzen die API des Anbieters und gestatten nicht, deine Eingaben über das zur Erbringung des Dienstes vertraglich Vereinbarte hinaus zum Training seiner allgemeinen Modelle zu verwenden.</p>
 <p><strong>9.3 RevenueCat: Abonnementverwaltung</strong><br>Verarbeitete Daten: Abonnement- und Kaufkennungen sowie Berechtigungsstatus und eine pseudonyme App-Nutzerkennung. Zweck: Validierung und Verwaltung von Abonnements und Berechtigungen über die App Stores hinweg. Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO. Standort: kann Daten in den Vereinigten Staaten verarbeiten (siehe Abschnitt 14). Verhältnis: Auftragsverarbeiter nach Art. 28 DSGVO.</p>
 <p><strong>9.4 Apple und Google: App Stores, Zahlungen und Plattform-Anmeldung</strong><br>Verarbeitete Daten: Kauf-, Zahlungs- und Plattform-Authentifizierungsdaten, die du direkt an diese Plattformen übermittelst. Zweck: Vertrieb der App, Abwicklung von Zahlungen und Abonnements sowie Bereitstellung von „Anmelden mit Apple" / „Google-Anmeldung". Rolle: Apple und Google handeln als eigenständige Verantwortliche für die von ihnen betriebenen Plattform- und Zahlungsprozesse. Wir erhalten deine vollständigen Zahlungsdaten nicht. Ihre Verarbeitung richtet sich nach ihren eigenen Datenschutzerklärungen.</p>
 <p><strong>9.5 Maileroo: E-Mail-Zustellung</strong><br>Verarbeitete Daten: deine E-Mail-Adresse und der Inhalt der versendeten E-Mails. Zweck: Zustellung transaktionaler E-Mails und, sofern zutreffend und mit Einwilligung, sonstiger E-Mails. Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO; Art. 6 Abs. 1 lit. a DSGVO für Marketing-E-Mails. Verhältnis: Auftragsverarbeiter nach Art. 28 DSGVO.</p>
-<p><strong>9.6 Analyse- und Werbeanbieter (nur mit Einwilligung)</strong><br>Die detaillierte Liste und die Bedingungen findest du in Abschnitt 11.</p>
+<p><strong>9.6 Cloudflare Turnstile: Bot- und Missbrauchsschutz</strong><br>Verarbeitete Daten: deine IP-Adresse, grundlegende technische sowie Browser-/Geräteinformationen und Interaktionssignale, die erforderlich sind, um Menschen von automatisierten Bots zu unterscheiden, zusammen mit einem Challenge-Token. Zweck: Schutz unserer Authentifizierungs- und Kontoformulare (Registrierung, Anmeldung, Passwort-Zurücksetzung sowie E-Mail-/Passwortänderungen) vor automatisiertem Missbrauch, Credential-Stuffing und Spam. Rechtsgrundlage: unser berechtigtes Interesse an der Sicherheit und Integrität des Dienstes, Art. 6 Abs. 1 lit. f DSGVO; es handelt sich um eine unbedingt erforderliche Sicherheitsmaßnahme, die keiner Einwilligung bedarf. Anbieter: Cloudflare, Inc. Standort: kann Daten in den Vereinigten Staaten verarbeiten (siehe Abschnitt 14). Verhältnis: Auftragsverarbeiter nach Art. 28 DSGVO. Cloudflare Turnstile ist darauf ausgelegt, ohne seitenübergreifendes Tracking und ohne Ausspielung von Werbung zu funktionieren.</p>
+<p><strong>9.7 Analyse- und Werbeanbieter (nur mit Einwilligung)</strong><br>Die detaillierte Liste und die Bedingungen findest du in Abschnitt 11.</p>
 <p>Wir können künftig zusätzliche oder alternative Anbieter für dieselben Zwecke einsetzen; wir werden diese Erklärung entsprechend aktualisieren und, soweit erforderlich, deine Einwilligung einholen, bevor wir sie aktivieren.</p>`,
         },
       },
@@ -357,7 +359,7 @@ window.LEGAL_CONTENT = {
       {
         en: {
           head: '14. International Data Transfers',
-          body: `<p>Some of our service providers are located in, or process data in, the United States or other countries outside the EEA, which may not provide a level of data protection equivalent to that of the EU. In particular, our database and stored files are hosted on AWS infrastructure in the United States (Northern Virginia), and our AI, subscription, and (consent-based) analytics and advertising providers may process data in the United States.</p>
+          body: `<p>Some of our service providers are located in, or process data in, the United States or other countries outside the EEA, which may not provide a level of data protection equivalent to that of the EU. In particular, our database and stored files are hosted on AWS infrastructure in the United States (Northern Virginia), and our AI, subscription, security/anti-abuse (Cloudflare Turnstile), and (consent-based) analytics and advertising providers may process data in the United States.</p>
 <p>Where we transfer personal data to a third country, we ensure appropriate safeguards in accordance with Chapter V of the GDPR, in particular:</p>
 <ul>
 <li>the European Commission's Standard Contractual Clauses (SCCs) pursuant to Art. 46(2)(c) GDPR, supplemented by additional measures where necessary; and/or</li>
@@ -368,7 +370,7 @@ window.LEGAL_CONTENT = {
         },
         de: {
           head: '14. Internationale Datenübermittlungen',
-          body: `<p>Einige unserer Dienstleister befinden sich in den Vereinigten Staaten oder anderen Ländern außerhalb des EWR oder verarbeiten dort Daten, die möglicherweise kein der EU gleichwertiges Datenschutzniveau bieten. Insbesondere werden unsere Datenbank und gespeicherte Dateien auf AWS-Infrastruktur in den Vereinigten Staaten (Northern Virginia) gehostet, und unsere Anbieter für KI, Abonnements sowie (einwilligungsbasiert) Analyse und Werbung können Daten in den Vereinigten Staaten verarbeiten.</p>
+          body: `<p>Einige unserer Dienstleister befinden sich in den Vereinigten Staaten oder anderen Ländern außerhalb des EWR oder verarbeiten dort Daten, die möglicherweise kein der EU gleichwertiges Datenschutzniveau bieten. Insbesondere werden unsere Datenbank und gespeicherte Dateien auf AWS-Infrastruktur in den Vereinigten Staaten (Northern Virginia) gehostet, und unsere Anbieter für KI, Abonnements, Sicherheit/Missbrauchsschutz (Cloudflare Turnstile) sowie (einwilligungsbasiert) Analyse und Werbung können Daten in den Vereinigten Staaten verarbeiten.</p>
 <p>Soweit wir personenbezogene Daten in ein Drittland übermitteln, stellen wir geeignete Garantien gemäß Kapitel V der DSGVO sicher, insbesondere:</p>
 <ul>
 <li>die Standardvertragsklauseln (SCC) der Europäischen Kommission gemäß Art. 46 Abs. 2 lit. c DSGVO, soweit erforderlich durch ergänzende Maßnahmen flankiert; und/oder</li>
@@ -745,8 +747,8 @@ window.LEGAL_CONTENT = {
   terms: {
     meta: {
       updated: {
-        en: 'Last updated: 22 June 2026 · Effective date: 22 June 2026',
-        de: 'Zuletzt aktualisiert: 22. Juni 2026 · Gültig ab: 22. Juni 2026',
+        en: 'Last updated: 26 August 2026 · Effective date: 26 August 2026',
+        de: 'Zuletzt aktualisiert: 26. August 2026 · Gültig ab: 26. August 2026',
       },
       note: {
         en: 'These Terms of Service form a contractual document that governs your use of the Neomind app. They have been drafted to align with German and EU consumer law. Where these Terms conflict with mandatory consumer protection rights granted to you by the law of your country of residence in the European Union, those mandatory rights take precedence.',
@@ -778,7 +780,7 @@ window.LEGAL_CONTENT = {
           body: `<p>2.1 Neomind is a subscription-based mental wellness application designed to support personal growth and mindset habits. It provides, among other things:</p>
 <ul>
 <li>(a) curated, built-in content such as affirmations, guided visualizations, "Mini Moments" prompts, and mindset resources;</li>
-<li>(b) tools to create, organise, and personalise your own content, including custom affirmations, visualizations, categories, sets, recorded audio, and uploaded images, videos, and background music;</li>
+<li>(b) tools to create, organise, and personalise your own content, including custom affirmations, visualizations, categories, sets, recorded audio, and uploaded images;</li>
 <li>(c) AI-assisted content generation that lets you generate text content based on your input (see Section 9);</li>
 <li>(d) a full-screen, gesture-based practice mode with text-to-speech, background music, favourites, reminders, themes, and home-screen and lock-screen widgets.</li>
 </ul>
@@ -790,7 +792,7 @@ window.LEGAL_CONTENT = {
           body: `<p>2.1 Neomind ist eine abonnementbasierte Anwendung für mentales Wohlbefinden, die persönliches Wachstum und Mindset-Gewohnheiten unterstützen soll. Sie bietet unter anderem:</p>
 <ul>
 <li>(a) kuratierte, integrierte Inhalte wie Affirmationen, geführte Visualisierungen, „Mini Moments"-Impulse und Mindset-Ressourcen;</li>
-<li>(b) Werkzeuge, um eigene Inhalte zu erstellen, zu organisieren und zu personalisieren, einschließlich eigener Affirmationen, Visualisierungen, Kategorien, Sets, aufgenommener Audiodateien sowie hochgeladener Bilder, Videos und Hintergrundmusik;</li>
+<li>(b) Werkzeuge, um eigene Inhalte zu erstellen, zu organisieren und zu personalisieren, einschließlich eigener Affirmationen, Visualisierungen, Kategorien, Sets, aufgenommener Audiodateien sowie hochgeladener Bilder;</li>
 <li>(c) KI-gestützte Inhaltserstellung, mit der du auf Grundlage deiner Eingaben Textinhalte generieren kannst (siehe Abschnitt 9);</li>
 <li>(d) einen Vollbild-Übungsmodus mit Gestensteuerung, Text-to-Speech, Hintergrundmusik, Favoriten, Erinnerungen, Designs sowie Homescreen- und Sperrbildschirm-Widgets.</li>
 </ul>
@@ -868,20 +870,28 @@ window.LEGAL_CONTENT = {
         en: {
           head: '7. Right of Withdrawal for Consumers',
           body: `<p>7.1 Where you purchase a subscription through an App Store, the contractual and withdrawal relationship for that purchase is governed primarily by the terms of the relevant App Store, including any cancellation or withdrawal rights they grant.</p>
-<p>7.2 To the extent any contract for digital content or digital services is concluded directly with us, you generally have a statutory right of withdrawal of fourteen (14) days as a consumer. However, for digital content and digital services that are supplied immediately, this right of withdrawal expires once we have begun to perform the contract, provided that (a) you have expressly consented to the immediate commencement of performance before the end of the withdrawal period, and (b) you have acknowledged that you thereby lose your right of withdrawal. By starting to use AI-generated content or other digital content immediately upon purchase, you provide such consent and acknowledgement.</p>
+<p>7.2 To the extent any contract for digital content or digital services is concluded directly with us (rather than through an App Store), you generally have a statutory right of withdrawal of fourteen (14) days as a consumer. Two cases must be distinguished:</p>
+<ul>
+<li>(a) <strong>Digital services (for example, a subscription).</strong> If, at your express request, performance begins during the withdrawal period, you may still withdraw within the 14 days. In that case we may charge a proportionate (pro rata) amount for the part of the service already provided up to the point at which you inform us of the withdrawal.</li>
+<li>(b) <strong>One-off digital content supplied immediately (for example, a single downloadable item).</strong> Your right of withdrawal expires once we have begun to perform, provided that (i) you have expressly consented to the immediate commencement of performance before the end of the withdrawal period, and (ii) you have acknowledged that you thereby lose your right of withdrawal. By starting to use such digital content immediately upon purchase, you provide that consent and acknowledgement.</li>
+</ul>
 <p>7.3 Nothing in this Section limits any non-waivable consumer rights you have under the law of your country of residence in the EU.</p>`,
         },
         de: {
           head: '7. Widerrufsrecht für Verbraucher',
           body: `<p>7.1 Soweit du ein Abonnement über einen App Store erwirbst, richtet sich das Vertrags- und Widerrufsverhältnis für diesen Kauf in erster Linie nach den Bedingungen des jeweiligen App Stores, einschließlich etwaiger von ihnen gewährter Kündigungs- oder Widerrufsrechte.</p>
-<p>7.2 Soweit ein Vertrag über digitale Inhalte oder digitale Dienstleistungen unmittelbar mit uns geschlossen wird, steht dir als Verbraucher grundsätzlich ein gesetzliches Widerrufsrecht von vierzehn (14) Tagen zu. Bei digitalen Inhalten und digitalen Dienstleistungen, die sofort bereitgestellt werden, erlischt dieses Widerrufsrecht jedoch, sobald wir mit der Vertragserfüllung begonnen haben, vorausgesetzt, dass (a) du dem sofortigen Beginn der Leistungserbringung vor Ablauf der Widerrufsfrist ausdrücklich zugestimmt und (b) bestätigt hast, dass du dadurch dein Widerrufsrecht verlierst. Indem du KI-generierte Inhalte oder andere digitale Inhalte unmittelbar nach dem Kauf nutzt, erteilst du diese Zustimmung und Bestätigung.</p>
+<p>7.2 Soweit ein Vertrag über digitale Inhalte oder digitale Dienstleistungen unmittelbar mit uns (und nicht über einen App Store) geschlossen wird, steht dir als Verbraucher grundsätzlich ein gesetzliches Widerrufsrecht von vierzehn (14) Tagen zu. Dabei sind zwei Fälle zu unterscheiden:</p>
+<ul>
+<li>(a) <strong>Digitale Dienstleistungen (zum Beispiel ein Abonnement).</strong> Beginnt die Leistung auf dein ausdrückliches Verlangen während der Widerrufsfrist, kannst du dennoch innerhalb der 14 Tage widerrufen. In diesem Fall können wir einen verhältnismäßigen (anteiligen) Betrag für den Teil der Dienstleistung berechnen, der bis zu dem Zeitpunkt, zu dem du uns über den Widerruf unterrichtest, bereits erbracht wurde.</li>
+<li>(b) <strong>Einmalige digitale Inhalte, die sofort bereitgestellt werden (zum Beispiel ein einzelner herunterladbarer Artikel).</strong> Dein Widerrufsrecht erlischt, sobald wir mit der Vertragserfüllung begonnen haben, vorausgesetzt, dass (i) du dem sofortigen Beginn der Leistungserbringung vor Ablauf der Widerrufsfrist ausdrücklich zugestimmt und (ii) bestätigt hast, dass du dadurch dein Widerrufsrecht verlierst. Indem du solche digitalen Inhalte unmittelbar nach dem Kauf nutzt, erteilst du diese Zustimmung und Bestätigung.</li>
+</ul>
 <p>7.3 Nichts in diesem Abschnitt beschränkt unverzichtbare Verbraucherrechte, die dir nach dem Recht deines Wohnsitzlandes in der EU zustehen.</p>`,
         },
       },
       {
         en: {
           head: '8. User-Generated Content',
-          body: `<p>8.1 The Service allows you to create, upload, and store your own content, such as text affirmations and visualizations, recorded audio, images, videos, and background music ("User Content").</p>
+          body: `<p>8.1 The Service allows you to create, upload, and store your own content, such as text affirmations and visualizations, recorded audio, and images ("User Content").</p>
 <p>8.2 You retain all rights you hold in your User Content. You grant us a simple (non-exclusive), worldwide, royalty-free licence to host, store, reproduce, adapt (for example, format and resize), and display your User Content solely to the extent technically necessary to operate, provide, and maintain the Service for you. This licence ends when you delete the relevant User Content or your account, except where retention is required by law or for backups that are deleted in the ordinary course.</p>
 <p>8.3 You are responsible for your User Content. You represent and warrant that you hold all necessary rights to your User Content and that it does not infringe the rights of any third party (including copyright, trademark, personality, or privacy rights) and does not violate applicable law.</p>
 <p>8.4 You must not upload, create, store, or share content that:</p>
@@ -896,7 +906,7 @@ window.LEGAL_CONTENT = {
         },
         de: {
           head: '8. Nutzergenerierte Inhalte',
-          body: `<p>8.1 Der Dienst ermöglicht es dir, eigene Inhalte zu erstellen, hochzuladen und zu speichern, etwa Text-Affirmationen und Visualisierungen, aufgenommene Audiodateien, Bilder, Videos und Hintergrundmusik („Nutzerinhalte").</p>
+          body: `<p>8.1 Der Dienst ermöglicht es dir, eigene Inhalte zu erstellen, hochzuladen und zu speichern, etwa Text-Affirmationen und Visualisierungen, aufgenommene Audiodateien und Bilder („Nutzerinhalte").</p>
 <p>8.2 Du behältst alle Rechte, die dir an deinen Nutzerinhalten zustehen. Du gewährst uns ein einfaches (nicht ausschließliches), weltweites, unentgeltliches Recht, deine Nutzerinhalte zu hosten, zu speichern, zu vervielfältigen, anzupassen (zum Beispiel zu formatieren und in der Größe zu ändern) und anzuzeigen, ausschließlich soweit dies technisch erforderlich ist, um den Dienst für dich zu betreiben, bereitzustellen und zu warten. Dieses Recht endet, wenn du die betreffenden Nutzerinhalte oder dein Konto löschst, außer soweit eine Aufbewahrung gesetzlich vorgeschrieben ist oder Backups betrifft, die im üblichen Verlauf gelöscht werden.</p>
 <p>8.3 Du bist für deine Nutzerinhalte verantwortlich. Du sicherst zu und gewährleistest, dass du alle erforderlichen Rechte an deinen Nutzerinhalten besitzt und dass diese keine Rechte Dritter verletzen (einschließlich Urheber-, Marken-, Persönlichkeits- oder Datenschutzrechte) und nicht gegen geltendes Recht verstoßen.</p>
 <p>8.4 Du darfst keine Inhalte hochladen, erstellen, speichern oder teilen, die:</p>
