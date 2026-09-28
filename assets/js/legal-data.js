@@ -7,8 +7,8 @@ window.LEGAL_CONTENT = {
   privacy: {
     meta: {
       updated: {
-        en: 'Last updated: 27 August 2026 · Effective date: 27 August 2026',
-        de: 'Zuletzt aktualisiert: 27. August 2026 · Gültig ab: 27. August 2026',
+        en: 'Last updated: 28 September 2026 · Effective date: 28 September 2026',
+        de: 'Zuletzt aktualisiert: 28. September 2026 · Gültig ab: 28. September 2026',
       },
       note: {
         en: 'This Privacy Policy is drafted to align with the EU General Data Protection Regulation (GDPR), the German Federal Data Protection Act (BDSG), and the German Telecommunications Digital Services Data Protection Act (TDDDG). Some sections describe third-party services that may not be active yet. Services that require your consent (in particular analytics and advertising) are only used after you have given consent, which can be withdrawn at any time.',
@@ -481,21 +481,21 @@ window.LEGAL_CONTENT = {
       {
         en: {
           head: '18. Consent Management and Withdrawal',
-          body: `<p>Where processing is based on your consent (in particular analytics and advertising, Section 11), we obtain your consent through an in-app consent mechanism before the relevant tools are activated. You can review and change your choices at any time in the app's privacy/consent settings, or by contacting us. Withdrawing consent is as easy as giving it, and it does not affect the lawfulness of processing carried out before the withdrawal.</p>`,
+          body: `<p>Where processing is based on your consent (in particular analytics and advertising, Section 11), we obtain your consent through an in-app consent mechanism before the relevant tools are activated. You can review and change your choices at any time in the app's privacy/consent settings, or by contacting us. Withdrawing consent is as easy as giving it, and it does not affect the lawfulness of processing carried out before the withdrawal. If you are under 16 years of age, your consent must be given or authorised by a parent or legal guardian (Art. 8 GDPR).</p>`,
         },
         de: {
           head: '18. Verwaltung und Widerruf der Einwilligung',
-          body: `<p>Soweit die Verarbeitung auf deiner Einwilligung beruht (insbesondere Analyse und Werbung, Abschnitt 11), holen wir deine Einwilligung über einen Einwilligungsmechanismus in der App ein, bevor die betreffenden Tools aktiviert werden. Du kannst deine Entscheidungen jederzeit in den Datenschutz-/Einwilligungseinstellungen der App überprüfen und ändern oder uns kontaktieren. Der Widerruf der Einwilligung ist ebenso einfach wie ihre Erteilung und berührt nicht die Rechtmäßigkeit der bis zum Widerruf erfolgten Verarbeitung.</p>`,
+          body: `<p>Soweit die Verarbeitung auf deiner Einwilligung beruht (insbesondere Analyse und Werbung, Abschnitt 11), holen wir deine Einwilligung über einen Einwilligungsmechanismus in der App ein, bevor die betreffenden Tools aktiviert werden. Du kannst deine Entscheidungen jederzeit in den Datenschutz-/Einwilligungseinstellungen der App überprüfen und ändern oder uns kontaktieren. Der Widerruf der Einwilligung ist ebenso einfach wie ihre Erteilung und berührt nicht die Rechtmäßigkeit der bis zum Widerruf erfolgten Verarbeitung. Wenn du jünger als 16 Jahre bist, muss deine Einwilligung von einem Elternteil oder gesetzlichen Vertreter erteilt oder genehmigt werden (Art. 8 DSGVO).</p>`,
         },
       },
       {
         en: {
           head: '19. Children',
-          body: `<p>The Service is intended exclusively for adults aged 18 and over. We do not knowingly collect personal data from children. If you believe that a minor has provided us with personal data, please contact us at neomind.help@gmail.com so that we can take appropriate action, including deleting the data.</p>`,
+          body: `<p>The Service is intended for a general audience and is not directed to children under 13. You must be at least 16 years of age to use the Service on your own; if you are between 13 and 15 years of age, you may use it only with the consent of a parent or legal guardian (see our Terms of Service). We do not knowingly collect personal data from children under 13. If you are a parent or guardian and believe that a child under 13 has provided us with personal data, please contact us at neomind.help@gmail.com so that we can take appropriate action, including deleting the data.</p>`,
         },
         de: {
           head: '19. Kinder',
-          body: `<p>Der Dienst ist ausschließlich für Erwachsene ab 18 Jahren bestimmt. Wir erheben nicht wissentlich personenbezogene Daten von Kindern. Wenn du Grund zu der Annahme hast, dass uns eine minderjährige Person personenbezogene Daten übermittelt hat, kontaktiere uns bitte unter neomind.help@gmail.com, damit wir geeignete Maßnahmen ergreifen können, einschließlich der Löschung der Daten.</p>`,
+          body: `<p>Der Dienst richtet sich an ein allgemeines Publikum und nicht an Kinder unter 13 Jahren. Um den Dienst eigenständig zu nutzen, musst du mindestens 16 Jahre alt sein; bist du zwischen 13 und 15 Jahre alt, darfst du ihn nur mit Zustimmung eines Elternteils oder gesetzlichen Vertreters nutzen (siehe unsere Nutzungsbedingungen). Wir erheben nicht wissentlich personenbezogene Daten von Kindern unter 13 Jahren. Wenn du ein Elternteil oder gesetzlicher Vertreter bist und Grund zu der Annahme hast, dass uns ein Kind unter 13 Jahren personenbezogene Daten übermittelt hat, kontaktiere uns bitte unter neomind.help@gmail.com, damit wir geeignete Maßnahmen ergreifen können, einschließlich der Löschung der Daten.</p>`,
         },
       },
       {
@@ -753,8 +753,8 @@ window.LEGAL_CONTENT = {
   terms: {
     meta: {
       updated: {
-        en: 'Last updated: 26 August 2026 · Effective date: 26 August 2026',
-        de: 'Zuletzt aktualisiert: 26. August 2026 · Gültig ab: 26. August 2026',
+        en: 'Last updated: 28 September 2026 · Effective date: 28 September 2026',
+        de: 'Zuletzt aktualisiert: 28. September 2026 · Gültig ab: 28. September 2026',
       },
       note: {
         en: 'These Terms of Service form a contractual document that governs your use of the Neomind app. They have been drafted to align with German and EU consumer law. Where these Terms conflict with mandatory consumer protection rights granted to you by the law of your country of residence in the European Union, those mandatory rights take precedence.',
@@ -809,14 +809,14 @@ window.LEGAL_CONTENT = {
       {
         en: {
           head: '3. Eligibility and User Account',
-          body: `<p>3.1 <strong>Age requirement.</strong> The Service is intended exclusively for adults. You may only use the Service and conclude a contract with us if you are at least 18 years of age and have full legal capacity to contract. By using the Service you confirm that you meet these requirements.</p>
+          body: `<p>3.1 <strong>Age requirement.</strong> You may create an account and use the Service if you are at least 16 years of age. If you are between 13 and 15 years of age, you may use the Service only with the prior consent of a parent or legal guardian, who accepts these Terms on your behalf and is responsible for your use of the Service. The Service is not directed to children under 13, and children under 13 may not create an account. A paid subscription may only be concluded by a person with full legal capacity to contract; if you are a minor, a parent or legal guardian must make any purchase on your behalf. By using the Service you confirm that you meet these requirements.</p>
 <p>3.2 <strong>Registration.</strong> Use of the Service requires the creation of a user account. You may register using an email address or via sign-in with Apple or Google. You must provide accurate information and keep it up to date.</p>
 <p>3.3 <strong>Account security.</strong> You are responsible for keeping your login credentials confidential and for all activity that occurs under your account. If you become aware of any unauthorised use of your account, you must inform us without undue delay at neomind.help@gmail.com.</p>
 <p>3.4 <strong>One account per person.</strong> Accounts are personal and may not be transferred to or shared with third parties.</p>`,
         },
         de: {
           head: '3. Voraussetzungen und Nutzerkonto',
-          body: `<p>3.1 <strong>Altersanforderung.</strong> Der Dienst ist ausschließlich für Erwachsene bestimmt. Du darfst den Dienst nur nutzen und einen Vertrag mit uns nur schließen, wenn du mindestens 18 Jahre alt und voll geschäftsfähig bist. Mit der Nutzung des Dienstes bestätigst du, dass du diese Voraussetzungen erfüllst.</p>
+          body: `<p>3.1 <strong>Altersanforderung.</strong> Du darfst ein Konto erstellen und den Dienst nutzen, wenn du mindestens 16 Jahre alt bist. Wenn du zwischen 13 und 15 Jahre alt bist, darfst du den Dienst nur mit vorheriger Zustimmung eines Elternteils oder gesetzlichen Vertreters nutzen, der diese Bedingungen in deinem Namen akzeptiert und für deine Nutzung des Dienstes verantwortlich ist. Der Dienst richtet sich nicht an Kinder unter 13 Jahren, und Kinder unter 13 Jahren dürfen kein Konto erstellen. Ein kostenpflichtiges Abonnement darf nur von einer voll geschäftsfähigen Person abgeschlossen werden; bist du minderjährig, muss ein Elternteil oder gesetzlicher Vertreter den Kauf in deinem Namen vornehmen. Mit der Nutzung des Dienstes bestätigst du, dass du diese Voraussetzungen erfüllst.</p>
 <p>3.2 <strong>Registrierung.</strong> Die Nutzung des Dienstes setzt die Erstellung eines Nutzerkontos voraus. Du kannst dich mit einer E-Mail-Adresse oder über die Anmeldung mit Apple oder Google registrieren. Du musst zutreffende Angaben machen und sie aktuell halten.</p>
 <p>3.3 <strong>Kontosicherheit.</strong> Du bist dafür verantwortlich, deine Anmeldedaten vertraulich zu behandeln, und für alle Aktivitäten, die unter deinem Konto erfolgen. Wenn du von einer unbefugten Nutzung deines Kontos Kenntnis erlangst, musst du uns unverzüglich unter neomind.help@gmail.com informieren.</p>
 <p>3.4 <strong>Ein Konto pro Person.</strong> Konten sind persönlich und dürfen nicht an Dritte übertragen oder mit ihnen geteilt werden.</p>`,
