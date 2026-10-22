@@ -78,6 +78,8 @@ const translations = {
     delete_how_head: 'So forderst du die Löschung an',
     delete_how_app: '<strong>In der App (am schnellsten):</strong> Öffne Neomind, gehe zum Tab <strong>Konto</strong>, tippe auf <strong>Konto löschen</strong> und bestätige. Deine Daten werden sofort gelöscht.',
     delete_how_email: '<strong>Per E-Mail:</strong> Schreibe an <a href="mailto:neomind.help@gmail.com">neomind.help@gmail.com</a> von der mit deinem Konto verknüpften E-Mail-Adresse und bitte uns um die Löschung. Wir müssen gegebenenfalls zuerst deine Identität überprüfen und antworten innerhalb der gesetzlichen Fristen (in der Regel innerhalb eines Monats).',
+    delete_partial_head: 'Nur einen Teil deiner Daten löschen',
+    delete_partial_body: 'Du musst nicht dein gesamtes Konto löschen, um Daten zu entfernen. In der App kannst du jederzeit einzelne Inhalte löschen, zum Beispiel deine eigenen Affirmationen, Sets, Visualisierungen und hochgeladenen Bilder. Um die Entfernung bestimmter personenbezogener Daten anzufordern, schreibe an <a href="mailto:neomind.help@gmail.com">neomind.help@gmail.com</a> und teile uns mit, was entfernt werden soll; wir antworten innerhalb der gesetzlichen Fristen (in der Regel innerhalb eines Monats).',
     delete_data_head: 'Was gelöscht wird',
     delete_data_body: 'Wenn dein Konto gelöscht wird, löschen oder anonymisieren wir deine damit verbundenen personenbezogenen Daten und alle von dir erstellten Inhalte. Dazu gehören deine eigenen Affirmationen und Visualisierungen, deine Kategorien und Sets, hochgeladene Bilder, aufgenommene Audiodaten, erzeugte Vertonungen sowie dein KI-Profil und deine Einstellungen.',
     delete_keep_head: 'Was wir aufbewahren und wie lange',
