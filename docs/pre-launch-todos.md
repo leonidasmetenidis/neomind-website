@@ -5,26 +5,22 @@ Things that must be done before shipping the website live.
 ## 🔗 `/download` redirect link
 
 The `/download` page (`download/index.html`) auto-detects the visitor's device
-and redirects to the app store listing. It currently uses **placeholder** store
-URLs that must be replaced with the real ones.
+and redirects to the app store listing. The real store URLs are now set. Note
+that both return 404 until the app listings are publicly live, so the redirect
+tests below can only pass after launch.
 
 Both store URLs now live in **one place** — `assets/js/config.js`. Editing
 them there updates every badge across the site *and* the `/download` redirect.
 
-- [ ] **Replace the iOS App Store URL.**
-  In `assets/js/config.js`, set `appStore` to the real listing.
-  Currently: `https://apps.apple.com/app/idXXXXXXXXXX`
-  Format: `https://apps.apple.com/app/id<APP_ID>` (the numeric App Store ID).
+- [x] **Replace the iOS App Store URL.**
+  Set in `assets/js/config.js`: `https://apps.apple.com/app/id6816407448`
 
-- [ ] **Replace the Google Play URL.**
-  In `assets/js/config.js`, set `playStore` to the real listing.
-  Currently: `https://play.google.com/store/apps/details?id=com.neomind.PLACEHOLDER`
-  Format: `https://play.google.com/store/apps/details?id=<ANDROID_PACKAGE_NAME>`
+- [x] **Replace the Google Play URL.**
+  Set in `assets/js/config.js`: `https://play.google.com/store/apps/details?id=com.getneomind.app`
 
 The QR code shown in the download modal and corner widget (`assets/js/layout.js`)
 is the **real, scannable code** encoding `https://getneomind.com/download`. It is
-final and never needs changing, filling in the store URLs above is all that's
-left. Standalone print versions (SVG + PNG) can be regenerated with segno if
+final and never needs changing. Standalone print versions (SVG + PNG) can be regenerated with segno if
 needed for flyers/packaging.
 
 - [ ] **Scan the on-screen QR with a real phone camera** and confirm it opens
@@ -64,12 +60,11 @@ needed for flyers/packaging.
 
 ## 🔗 Social links in the footer
 
-The footer social icons currently point to `href="#"` placeholders
-(`assets/js/layout.js`). Replace each with the real profile URL.
+The footer social icons (`assets/js/layout.js`) link to the real profiles.
 
-- [ ] **Set the TikTok URL** on the footer TikTok link.
-- [ ] **Set the Instagram URL** on the footer Instagram link.
-- [ ] **Set the YouTube URL** on the footer YouTube link.
+- [x] **Set the TikTok URL** (`https://www.tiktok.com/@getneomind`).
+- [x] **Set the Instagram URL** (`https://www.instagram.com/getneomind`).
+- [x] **Set the YouTube URL** (`https://www.youtube.com/@getneomind`).
 
 ## 🖼️ Image optimization (page load is slow)
 
