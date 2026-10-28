@@ -96,7 +96,7 @@ Reduce the total image payload before launch.
 ## 🧑 Founder photo (About page)
 
 - [x] **Add a real founder photo.** Done. `assets/images/founder.webp`
-  (456x456) is shown on `story/index.html` as a small 96px circle
+  (456x456) is shown on `story/index.html` as a small 110px circle
   (`.about__avatar`), matching the round photo atop the in-app founder letter.
 
 ## ✍️ Copy QA (EN + DE)

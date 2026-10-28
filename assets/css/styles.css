@@ -1382,8 +1382,8 @@ body {
 
 /* Small round founder photo, a slightly larger take on the circle atop the in-app founder letter. */
 .about__avatar {
-  width: 96px;
-  height: 96px;
+  width: 110px;
+  height: 110px;
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid rgba(255, 255, 255, 0.14);
