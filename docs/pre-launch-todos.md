@@ -95,15 +95,9 @@ Reduce the total image payload before launch.
 
 ## 🧑 Founder photo (About page)
 
-The story page (`story/index.html`) currently shows a CSS placeholder (a wide
-purple banner) instead of a real founder photo.
-
-- [ ] **Add a real founder photo.** Drop the image in `assets/images/` (WebP,
-  wide/landscape, ideally 16:9), then replace the placeholder `<div
-  class="about__photo about__photo--placeholder">` with `<img
-  class="about__photo" src="../assets/images/founder.webp" alt="Leonidas,
-  founder of Neomind">`. It spans the full article width; the rounded corners
-  and crop apply automatically.
+- [x] **Add a real founder photo.** Done. `assets/images/founder.webp`
+  (456x456) is shown on `story/index.html` as a small 96px circle
+  (`.about__avatar`), matching the round photo atop the in-app founder letter.
 
 ## ✍️ Copy QA (EN + DE)
 
